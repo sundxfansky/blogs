@@ -11,8 +11,6 @@ tags: [
 ]
 categories: [
     "Development",
-    "golang",
-    "index",
 ]
 ---
 
