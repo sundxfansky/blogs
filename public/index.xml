@@ -18,9 +18,11 @@
       
       <guid>https://sundxfansky.github.io/post/scrapy%E7%88%AC%E8%99%AB%E6%8A%80%E5%B7%A7/scrapy_mysql/</guid>
       
-        <description>&lt;p&gt;使用scarpy构建自己的爬虫系统非常简单，本文给出了两种在爬取数据后将数据保存到数据库的方法
+        <description>&lt;p&gt;使用scarpy构建自己的爬虫系统非常简单，本文给出了两种在爬取数据后将数据保存到数据库的方法.&lt;/p&gt;
 
-其中分同步和异步两种方法将数据保存到数据库中，数据库使用mysql，笔者均没有对两种情况的传输方法进行测试。&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;其中分同步和异步两种方法将数据保存到数据库中，数据库使用mysql，笔者均没有对两种情况的传输方法进行测试。&lt;/p&gt;
 
 &lt;h2 id=&#34;版本&#34;&gt;版本&lt;/h2&gt;
 
