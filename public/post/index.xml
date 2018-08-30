@@ -13,10 +13,10 @@
     
     <item>
       <title>Scrapy爬取数据保存mysql的方法</title>
-      <link>https://sundxfansky.github.io/post/scrapy%E7%88%AC%E8%99%AB%E6%8A%80%E5%B7%A7/scrapy%E7%88%AC%E5%8F%96%E6%95%B0%E6%8D%AE%E4%BF%9D%E5%AD%98mysql%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+      <link>https://sundxfansky.github.io/post/scrapy_crawl_skills/scrapy_data_to_mysql/</link>
       <pubDate>Thu, 30 Aug 2018 20:24:09 +0800</pubDate>
       
-      <guid>https://sundxfansky.github.io/post/scrapy%E7%88%AC%E8%99%AB%E6%8A%80%E5%B7%A7/scrapy%E7%88%AC%E5%8F%96%E6%95%B0%E6%8D%AE%E4%BF%9D%E5%AD%98mysql%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+      <guid>https://sundxfansky.github.io/post/scrapy_crawl_skills/scrapy_data_to_mysql/</guid>
       <description>&lt;p&gt;使用scarpy构建自己的爬虫系统非常简单，本文给出了两种在爬取数据后将数据保存到数据库的方法.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>短评--互联网大数据分析用户情感？</title>
-      <link>https://sundxfansky.github.io/post/%E7%A1%85%E8%B0%B7%E6%9D%A5%E4%BF%A1%E7%9F%AD%E8%AF%84/%E7%9F%AD%E8%AF%84--%E4%BA%92%E8%81%94%E7%BD%91%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E7%94%A8%E6%88%B7%E6%83%85%E6%84%9F/</link>
+      <link>https://sundxfansky.github.io/post/comments_of_sillicon_valley_letters/letter3/</link>
       <pubDate>Wed, 29 Aug 2018 22:54:54 +0800</pubDate>
       
-      <guid>https://sundxfansky.github.io/post/%E7%A1%85%E8%B0%B7%E6%9D%A5%E4%BF%A1%E7%9F%AD%E8%AF%84/%E7%9F%AD%E8%AF%84--%E4%BA%92%E8%81%94%E7%BD%91%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E7%94%A8%E6%88%B7%E6%83%85%E6%84%9F/</guid>
+      <guid>https://sundxfansky.github.io/post/comments_of_sillicon_valley_letters/letter3/</guid>
       <description>会被左右的问卷 文中提出了一个很有意思的例子作为佐证，当一个人做了一件错事，比如前几天滴滴顺风车司机的恶劣行为，调查问卷像这样问你的时候： 如果</description>
     </item>
     
