@@ -104,7 +104,7 @@ MYSQL_DATABASE_NAME = "article_spider"
 MYSQL_USER = "root"
 MYSQL_PASSWORD = "password"
 ```
-2.需要在自己的item中重写get_inser_sql()函数如下：
+2.需要在自己的`items.py`中重写`get_inser_sql()`函数如下：
 
 ```python
     def get_insert_sql(self):
