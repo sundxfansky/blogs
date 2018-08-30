@@ -3,6 +3,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sundxfansky.github.io/post/scrapy%E7%88%AC%E8%99%AB%E6%8A%80%E5%B7%A7/scrapy_mysql/</loc>
+    <lastmod>2018-08-30T20:24:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://sundxfansky.github.io/post/%E7%A1%85%E8%B0%B7%E6%9D%A5%E4%BF%A1%E7%9F%AD%E8%AF%84/3_letter/</loc>
     <lastmod>2018-08-29T22:54:54+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -212,8 +219,15 @@
   </url>
   
   <url>
+    <loc>https://sundxfansky.github.io/tags/mysql/</loc>
+    <lastmod>2018-08-30T20:24:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://sundxfansky.github.io/post/</loc>
-    <lastmod>2018-08-29T22:54:54+08:00</lastmod>
+    <lastmod>2018-08-30T20:24:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -221,6 +235,20 @@
   <url>
     <loc>https://sundxfansky.github.io/tags/preview/</loc>
     <lastmod>2018-03-07T16:01:23+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sundxfansky.github.io/categories/python/</loc>
+    <lastmod>2018-08-30T20:24:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sundxfansky.github.io/tags/scrapy/</loc>
+    <lastmod>2018-08-30T20:24:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -318,7 +346,7 @@
   
   <url>
     <loc>https://sundxfansky.github.io/</loc>
-    <lastmod>2018-08-29T22:54:54+08:00</lastmod>
+    <lastmod>2018-08-30T20:24:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -326,6 +354,13 @@
   <url>
     <loc>https://sundxfansky.github.io/categories/%E6%80%9D%E8%80%83/</loc>
     <lastmod>2018-08-29T22:54:54+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sundxfansky.github.io/categories/%E7%88%AC%E8%99%AB/</loc>
+    <lastmod>2018-08-30T20:24:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

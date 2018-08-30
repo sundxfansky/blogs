@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Tonser&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 29 Aug 2018 22:54:54 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 30 Aug 2018 20:24:09 +0800</lastBuildDate>
     
 	<atom:link href="https://sundxfansky.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Scrapy爬取数据保存mysql的方法</title>
+      <link>https://sundxfansky.github.io/post/scrapy%E7%88%AC%E8%99%AB%E6%8A%80%E5%B7%A7/scrapy_mysql/</link>
+      <pubDate>Thu, 30 Aug 2018 20:24:09 +0800</pubDate>
+      
+      <guid>https://sundxfansky.github.io/post/scrapy%E7%88%AC%E8%99%AB%E6%8A%80%E5%B7%A7/scrapy_mysql/</guid>
+      <description>使用scarpy构建自己的爬虫系统非常简单，本文给出了两种在爬取数据后将数据保存到数据库的方法，使用的版本如下： 版本 python版本：3.6</description>
+    </item>
     
     <item>
       <title>短评--互联网大数据分析用户情感？</title>
