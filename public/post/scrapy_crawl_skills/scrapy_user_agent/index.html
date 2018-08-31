@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="zh-cn" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>使用Middleware设置scrapy的User-Agent代理池 - Tonser&#39;s blog</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Tonser" />
+  <meta name="description" content="使用scrapy爬虫时可能会遇到服务器检测爬虫客户端的headers中user-agent，当被检测到同一个IP地址同一个user-agent有类似爬虫的行为时，服务器会对访问作出一些限制，用来保护正常访问的用户，这无疑对爬虫用户不太友好，本文介绍如何使用user-agent代理池破除这一限制。 " />
+
+  <meta name="keywords" content="Tonser, blog, jane" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.47.1" />
+
+
+<link rel="canonical" href="https://sundxfansky.github.io/post/scrapy_crawl_skills/scrapy_user_agent/" />
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+<link href="/dist/jane.min.css?v=2.7.0" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="使用Middleware设置scrapy的User-Agent代理池" />
+<meta property="og:description" content="使用scrapy爬虫时可能会遇到服务器检测爬虫客户端的headers中user-agent，当被检测到同一个IP地址同一个user-agent有类似爬虫的行为时，服务器会对访问作出一些限制，用来保护正常访问的用户，这无疑对爬虫用户不太友好，本文介绍如何使用user-agent代理池破除这一限制。
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sundxfansky.github.io/post/scrapy_crawl_skills/scrapy_user_agent/" /><meta property="article:published_time" content="2018-09-01T00:13:23&#43;08:00"/>
+<meta property="article:modified_time" content="2018-09-01T00:13:23&#43;08:00"/>
+<meta itemprop="name" content="使用Middleware设置scrapy的User-Agent代理池">
+<meta itemprop="description" content="使用scrapy爬虫时可能会遇到服务器检测爬虫客户端的headers中user-agent，当被检测到同一个IP地址同一个user-agent有类似爬虫的行为时，服务器会对访问作出一些限制，用来保护正常访问的用户，这无疑对爬虫用户不太友好，本文介绍如何使用user-agent代理池破除这一限制。
+">
+
+
+<meta itemprop="datePublished" content="2018-09-01T00:13:23&#43;08:00" />
+<meta itemprop="dateModified" content="2018-09-01T00:13:23&#43;08:00" />
+<meta itemprop="wordCount" content="1510">
+
+
+
+<meta itemprop="keywords" content="mysql,scrapy," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="使用Middleware设置scrapy的User-Agent代理池"/>
+<meta name="twitter:description" content="使用scrapy爬虫时可能会遇到服务器检测爬虫客户端的headers中user-agent，当被检测到同一个IP地址同一个user-agent有类似爬虫的行为时，服务器会对访问作出一些限制，用来保护正常访问的用户，这无疑对爬虫用户不太友好，本文介绍如何使用user-agent代理池破除这一限制。
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">细嗅蔷薇</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://sundxfansky.github.io/">主页</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://sundxfansky.github.io/post/">文章</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://sundxfansky.github.io/tags/">标签</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://sundxfansky.github.io/categories/">分类</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://sundxfansky.github.io/about/">关于</a>
+          
+        
+      </li>
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      细嗅蔷薇
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://sundxfansky.github.io/">主页</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://sundxfansky.github.io/post/">文章</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://sundxfansky.github.io/tags/">标签</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://sundxfansky.github.io/categories/">分类</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://sundxfansky.github.io/about/">关于</a>
+          
+
+        
+
+      </li>
+    
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">使用Middleware设置scrapy的User-Agent代理池</h1>
+      
+      <div class="post-meta">
+        <span class="post-time"> 2018-09-01 </span>
+        <div class="post-category">
+            <a href="https://sundxfansky.github.io/categories/python/"> python </a>
+            <a href="https://sundxfansky.github.io/categories/%E7%88%AC%E8%99%AB/"> 爬虫 </a>
+            
+          </div>
+        <span class="more-meta"> 约 1510 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
+
+        
+        
+          <span id="busuanzi_container_page_pv">
+            | 阅读 <span id="busuanzi_value_page_pv"></span>
+          </span>
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#downloadermiddleware-下载器中间件-的使用">DownloaderMiddleware（下载器中间件） 的使用</a></li>
+<li><a href="#自己定义middleware">自己定义middleware</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <p>使用scrapy爬虫时可能会遇到服务器检测爬虫客户端的headers中user-agent，当被检测到同一个IP地址同一个user-agent有类似爬虫的行为时，服务器会对访问作出一些限制，用来保护正常访问的用户，这无疑对爬虫用户不太友好，本文介绍如何使用user-agent代理池破除这一限制。
+</p>
+
+<h2 id="downloadermiddleware-下载器中间件-的使用">DownloaderMiddleware（下载器中间件） 的使用</h2>
+
+<p>首先先了解一下scrapy的框架，如图：
+<img src="/image/scrapy_architecture_02.png" alt="架构图" />
+关于详细的解释后面会专门写一个文章来写，在图中蓝色的方块就是middleware，从图中可以看出有两个middleware，分别是spider和Downloader两个，对于Downloaded的middleware，也就是对scrapy的engine发出的request请求，做一个预处理从而发给服务器去请求html。有关更详细的关于DownloaderMiddleware的描述可以<a href="https://docs.scrapy.org/en/latest/topics/downloader-middleware.html">点击官网</a>查看。</p>
+
+<blockquote>
+<p>下载器中间件是介于Scrapy的request/response处理的钩子框架。 是用于全局修改Scrapy request和response的一个轻量、底层的系统。</p>
+</blockquote>
+
+<p>要想激活自己的下载器中间件设置需要在<code>settings.py</code>文件中设置(取消注释)：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">DOWNLOADER_MIDDLEWARES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;myproject.middlewares.CustomDownloaderMiddleware&#39;</span><span class="p">:</span> <span class="mi">543</span><span class="p">,</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>留意官网的说明：</p>
+
+<blockquote>
+<p>The <code>DOWNLOADER_MIDDLEWARES</code> setting is merged with the <code>DOWNLOADER_MIDDLEWARES_BASE</code> setting defined in Scrapy (and not meant to be overridden) and then sorted by order to get the final sorted list of enabled middlewares: the first middleware is the one closer to the engine and the last is the one closer to the downloader. In other words, the <code>process_request()</code> method of each middleware will be invoked in increasing middleware order (100, 200, 300, …) and the <code>process_response()</code> method of each middleware will be invoked in decreasing order.</p>
+
+<p>To decide which order to assign to your middleware see the <code>DOWNLOADER_MIDDLEWARES_BASE</code> setting and pick a value according to where you want to insert the middleware. The order does matter because each middleware performs a different action and your middleware could depend on some previous (or subsequent) middleware being applied.</p>
+
+<p>If you want to disable a built-in middleware (the ones defined in <code>DOWNLOADER_MIDDLEWARES_BASE</code> and enabled by default) you must define it in your project’s <code>DOWNLOADER_MIDDLEWARES</code> setting and assign None as its value. For example, if you want to disable the user-agent middleware:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">DOWNLOADER_MIDDLEWARES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;myproject.middlewares.CustomDownloaderMiddleware&#39;</span><span class="p">:</span> <span class="mi">543</span><span class="p">,</span>
+    <span class="s1">&#39;scrapy.downloadermiddlewares.useragent.UserAgentMiddleware&#39;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div></blockquote>
+
+<p>如果上述的<code>'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,</code>命令没有修改的话，很有可能在自己修改了user-agent之后又被默认的middleware改回去，失去了修改的作用。</p>
+
+<h2 id="自己定义middleware">自己定义middleware</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">fake_useragent</span> <span class="kn">import</span> <span class="n">UserAgent</span>
+
+<span class="k">class</span> <span class="nc">RandomUserAgentMiddleware</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">crawler</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">RandomUserAgentMiddleware</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ua</span> <span class="o">=</span> <span class="n">UserAgent</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ua_type</span> <span class="o">=</span> <span class="n">crawler</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&#34;USER_AGENT_TYPE&#34;</span><span class="p">,</span> <span class="s2">&#34;random&#34;</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_crawler</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">crawler</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">crawler</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">process_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">spider</span><span class="p">):</span>
+        <span class="k">def</span> <span class="nf">get_ua_type</span><span class="p">():</span>
+            <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ua</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ua_type</span><span class="p">)</span>
+        <span class="n">request</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;User-Agent&#39;</span><span class="p">,</span> <span class="n">get_ua_type</span><span class="p">())</span>
+        <span class="k">pass</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>使用了python3的<a href="https://github.com/hellysmile/fake-useragent">fake_useragent</a>库,在终端下输入<code>pip install fake-userage</code>安装，按照作者的指示：</p>
+
+<blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">fake_useragent</span> <span class="kn">import</span> <span class="n">UserAgent</span>
+<span class="n">ua</span> <span class="o">=</span> <span class="n">UserAgent</span><span class="p">()</span>
+
+<span class="n">ua</span><span class="o">.</span><span class="n">ie</span>
+<span class="c1"># Mozilla/5.0 (Windows; U; MSIE 9.0; Windows NT 9.0; en-US);</span>
+<span class="n">ua</span><span class="o">.</span><span class="n">msie</span>
+<span class="c1"># Mozilla/5.0 (compatible; MSIE 10.0; Macintosh; Intel Mac OS X 10_7_3; Trident/6.0)&#39;</span>
+<span class="n">ua</span><span class="p">[</span><span class="s1">&#39;Internet Explorer&#39;</span><span class="p">]</span>
+<span class="c1"># Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; GTB7.4; InfoPath.2; SV1; .NET CLR 3.3.69573; WOW64; en-US)</span>
+<span class="n">ua</span><span class="o">.</span><span class="n">opera</span>
+<span class="c1"># Opera/9.80 (X11; Linux i686; U; ru) Presto/2.8.131 Version/11.11</span>
+<span class="n">ua</span><span class="o">.</span><span class="n">chrome</span>
+<span class="c1"># Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.2 (KHTML, like Gecko) Chrome/22.0.1216.0 Safari/537.2&#39;</span>
+<span class="n">ua</span><span class="o">.</span><span class="n">google</span>
+<span class="c1"># Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_4) AppleWebKit/537.13 (KHTML, like Gecko) Chrome/24.0.1290.1 Safari/537.13</span>
+<span class="n">ua</span><span class="p">[</span><span class="s1">&#39;google chrome&#39;</span><span class="p">]</span>
+<span class="c1"># Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11</span>
+<span class="n">ua</span><span class="o">.</span><span class="n">firefox</span>
+<span class="c1"># Mozilla/5.0 (Windows NT 6.2; Win64; x64; rv:16.0.1) Gecko/20121011 Firefox/16.0.1</span>
+<span class="n">ua</span><span class="o">.</span><span class="n">ff</span>
+<span class="c1"># Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:15.0) Gecko/20100101 Firefox/15.0.1</span>
+<span class="n">ua</span><span class="o">.</span><span class="n">safari</span>
+<span class="c1"># Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5355d Safari/8536.25</span>
+<span class="c1"># and the best one, random via real world browser usage statistic</span>
+<span class="n">ua</span><span class="o">.</span><span class="n">random</span></code></pre></td></tr></table>
+</div>
+</div></blockquote>
+
+<p>可以在<code>settings.py</code>中设置<code>USER_AGENT_TYPE</code>类型确定，对于<code>getattr()</code>函数，可以参考官方文档的解读：</p>
+
+<blockquote>
+<p>getattr(object, name[, default])</p>
+
+<p>Return the value of the named attribute of object. name must be a string. If the string is the name of one of the object’s attributes, the result is the value of that attribute. <strong>For example, getattr(x, &lsquo;foobar&rsquo;) is equivalent to x.foobar.</strong> If the named attribute does not exist, default is returned if provided, otherwise AttributeError is raised.</p>
+</blockquote>
+
+<p>而后<code>settings.py</code>中设置为：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">DOWNLOADER_MIDDLEWARES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;addyourpath.middlewares.RandomUserAgentMiddleware&#39;</span><span class="p">:</span> <span class="mi">543</span><span class="p">,</span>
+    <span class="s1">&#39;scrapy.downloadermiddlewares.useragent.UserAgentMiddleware&#39;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>最后就完成了user-agent代理池的设置
+关于<code>settings.py</code>文件又一个小技巧就是，当一个爬虫项目设置多个爬虫网站的时候，可以在spider目录下自己写爬虫代码的项目文件中，如<code>news.py</code>中，在自己的类中加入</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">custom_settings</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="c1">#仅作演示</span>
+    <span class="s2">&#34;COOKIES_ENABLED&#34;</span><span class="p">:</span> <span class="bp">True</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>对应源码可以查看<code>scrapy/spiders/__init__.py</code>中，找到<code>custom_settings</code>。</p>
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Tonser</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2018-09-01</span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="https://sundxfansky.github.io/tags/mysql/">mysql</a>
+          <a href="https://sundxfansky.github.io/tags/scrapy/">scrapy</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/scrapy_crawl_skills/scrapy_data_to_mysql/">
+            <span class="next-text nav-default">Scrapy爬取数据保存mysql的方法</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "sundxfansky/comments_blog"
+            issue-term="pathname"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+  
+
+  
+
+  
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:sundxfansky@sjtu.edu.cn" rel="me noopener" class="iconfont icon-email"
+        title="email" target="_blank">
+      </a>
+      <a href="https://github.com/sundxfansky" rel="me noopener" class="iconfont icon-github"
+        title="github" target="_blank">
+      </a>
+  <a href="https://sundxfansky.github.io/index.xml" rel="noopener alternate" type="application/rss&#43;xml" class="iconfont icon-rss"
+    title="rss" target="_blank">
+  </a>
+  </div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span><span class="author">
+        Tonser
+        
+      </span></span>
+
+  
+  
+    <span id="busuanzi_container">
+      访客数/访问量：<span id="busuanzi_value_site_uv"></span>/<span id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+<script type="text/javascript" src="/dist/jane.min.js?v=2.7.0"></script>
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
