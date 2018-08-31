@@ -168,9 +168,9 @@
 &lt;span class=&#34;c1&#34;&gt;# and the best one, random via real world browser usage statistic&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;ua&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;random&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+
 &lt;p&gt;查看源码后为&lt;a href=&#34;http://d2g6u4gh6d9rq0.cloudfront.net/browsers/fake_useragent_0.1.10.json&#34;&gt;json文件&lt;/a&gt;,作者自己维护，后期可以考虑自己将其下载下来到数据库中，从本地读取，但是仍推荐使用云端方法，因为有原作者在维护&lt;/p&gt;
-&lt;/blockquote&gt;
 
 &lt;p&gt;可以在&lt;code&gt;settings.py&lt;/code&gt;中设置&lt;code&gt;USER_AGENT_TYPE&lt;/code&gt;类型确定，对于&lt;code&gt;getattr()&lt;/code&gt;函数，可以参考官方文档的解读：&lt;/p&gt;
 

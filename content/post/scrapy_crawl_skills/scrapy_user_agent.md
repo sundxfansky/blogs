@@ -98,6 +98,7 @@ ua.safari
 # and the best one, random via real world browser usage statistic
 ua.random
 ```
+
 查看源码后为[json文件](http://d2g6u4gh6d9rq0.cloudfront.net/browsers/fake_useragent_0.1.10.json),作者自己维护，后期可以考虑自己将其下载下来到数据库中，从本地读取，但是仍推荐使用云端方法，因为有原作者在维护
 
 可以在`settings.py`中设置`USER_AGENT_TYPE`类型确定，对于`getattr()`函数，可以参考官方文档的解读：
