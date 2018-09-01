@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Scrapy · Tonser&#39;s blog</title>
+  <title>Mac下使用virtualenv搭建python的虚拟环境 - Tonser&#39;s blog</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -25,7 +25,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Tonser" />
-  <meta name="description" content="一个偷偷写东西的地方" />
+  <meta name="description" content="使用虚拟环境的好处是不会影响系统的环境，可以每开发一个python项目就使用一个虚拟环境，方便管理包，也避免了无用的包。 " />
+
   <meta name="keywords" content="Tonser, blog, jane" />
 
 
@@ -36,8 +37,7 @@
 <meta name="generator" content="Hugo 0.47.1" />
 
 
-<link rel="canonical" href="https://sundxfansky.github.io/tags/scrapy/" />
-<link href="https://sundxfansky.github.io/tags/scrapy/index.xml" rel="alternate" type="application/rss+xml" title="Tonser&#39;s blog" />
+<link rel="canonical" href="https://sundxfansky.github.io/post/scrapy_crawl_skills/virturalenv_skills/" />
 
 
 
@@ -57,17 +57,28 @@
 
 
 
-<meta property="og:title" content="Scrapy" />
-<meta property="og:description" content="一个偷偷写东西的地方" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://sundxfansky.github.io/tags/scrapy/" />
-<meta property="og:updated_time" content="2018-09-01T23:33:21&#43;08:00"/>
-<meta itemprop="name" content="Scrapy">
-<meta itemprop="description" content="一个偷偷写东西的地方">
+<meta property="og:title" content="Mac下使用virtualenv搭建python的虚拟环境" />
+<meta property="og:description" content="使用虚拟环境的好处是不会影响系统的环境，可以每开发一个python项目就使用一个虚拟环境，方便管理包，也避免了无用的包。
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sundxfansky.github.io/post/scrapy_crawl_skills/virturalenv_skills/" /><meta property="article:published_time" content="2018-09-01T23:33:21&#43;08:00"/>
+<meta property="article:modified_time" content="2018-09-01T23:33:21&#43;08:00"/>
+<meta itemprop="name" content="Mac下使用virtualenv搭建python的虚拟环境">
+<meta itemprop="description" content="使用虚拟环境的好处是不会影响系统的环境，可以每开发一个python项目就使用一个虚拟环境，方便管理包，也避免了无用的包。
+">
 
+
+<meta itemprop="datePublished" content="2018-09-01T23:33:21&#43;08:00" />
+<meta itemprop="dateModified" content="2018-09-01T23:33:21&#43;08:00" />
+<meta itemprop="wordCount" content="572">
+
+
+
+<meta itemprop="keywords" content="“scrapy”," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Scrapy"/>
-<meta name="twitter:description" content="一个偷偷写东西的地方"/>
+<meta name="twitter:title" content="Mac下使用virtualenv搭建python的虚拟环境"/>
+<meta name="twitter:description" content="使用虚拟环境的好处是不会影响系统的环境，可以每开发一个python项目就使用一个虚拟环境，方便管理包，也避免了无用的包。
+"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -275,77 +286,171 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
-          
-
-<section id="archive" class="archive">
-  
+          <article class="post bg-white">
     
-      <div class="archive-title tag">
-        <h2 class="archive-name">标签： Scrapy</h2>
+    <header class="post-header">
+      <h1 class="post-title">Mac下使用virtualenv搭建python的虚拟环境</h1>
+      
+      <div class="post-meta">
+        <span class="post-time"> 2018-09-01 </span>
+        <div class="post-category">
+            <a href="https://sundxfansky.github.io/categories/python/"> python </a>
+            
+          </div>
+        <span class="more-meta"> 约 572 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+
+        
+        
+          <span id="busuanzi_container_page_pv">
+            | 阅读 <span id="busuanzi_value_page_pv"></span>
+          </span>
+        
+
+        
+        
       </div>
+    </header>
+
     
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#安装">安装</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <p>使用虚拟环境的好处是不会影响系统的环境，可以每开发一个python项目就使用一个虚拟环境，方便管理包，也避免了无用的包。
+</p>
+
+<h2 id="安装">安装</h2>
+
+<p>建议安装 virtualenv与virtualenvwrapper
+Virtaulenvwrapper是virtualenv的扩展包，可以更方便地新增，删除，复制，切换虚拟环境。
+终端下安装方法：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">sudo  pip install virtualenv
+sudo pip install virtualenvwrapper</pre></td></tr></table>
+</div>
+</div>
+<p>而后可以配置<code>virtualenvwrapper</code>：
+下面是安装的虚拟环境的位置:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">export WORKON_HOME=&#39;~/to/your/path&#39;
+source /usr/local/bin/virtualenvwrapper.sh</pre></td></tr></table>
+</div>
+</div>
+<p>将其写入终端的配置文件中,例如如果使用bash，则添加到<code>~/.bashrc</code>中；如果使用zsh，则添加到<code>~/.zshrc</code>中,或者常用的用户配置文件<code>~/.bash_profile</code>.
+之后需要source一下生效：
+source <code>~/.bash_profile</code></p>
+
+<p>使用方法：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">查看帮助：virtualenvwrapper --help 
+创建基本环境：mkvirtualenv [环境名]
+删除环境：rmvirtualenv [环境名]
+激活环境：workon [环境名]
+退出环境：deactivate
+列出所有环境：workon或者lsvirtualenv -b
+安装指定版本的python 环境：mkvirtualenv -p python3 artical_spider</pre></td></tr></table>
+</div>
+</div>
+<p>之后在该环境下安装使用包不会影响系统python或者其他python环境的包，非常方便。</p>
+
+<p>在scrapy开发的时候可以使用这种方法，在pycharm的设置中需要在如图设置：
+<img src="/image/pycharm_settings.png" alt="pycharm设置" /></p>
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Tonser</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2018-09-01</span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="https://sundxfansky.github.io/tags/scrapy/">“scrapy”</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/scrapy_crawl_skills/scrapy_user_agent/">
+            <span class="next-text nav-default">使用Middleware设置scrapy的User-Agent代理池</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
   
 
   
-    <div class="archive-post">
-      <span class="archive-post-time">
-        2018-09-01
-      </span>
-      <span class="archive-post-title">
-        <a href="/post/scrapy_crawl_skills/virturalenv_skills/" class="archive-post-link">
-          Mac下使用virtualenv搭建python的虚拟环境
-        </a>
-      </span>
+  
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "sundxfansky/comments_blog"
+            issue-term="pathname"
+            crossorigin="anonymous"
+            async>
+      </script>
     </div>
   
-    <div class="archive-post">
-      <span class="archive-post-time">
-        2018-09-01
-      </span>
-      <span class="archive-post-title">
-        <a href="/post/scrapy_crawl_skills/scrapy_user_agent/" class="archive-post-link">
-          使用Middleware设置scrapy的User-Agent代理池
-        </a>
-      </span>
-    </div>
-  
-    <div class="archive-post">
-      <span class="archive-post-time">
-        2018-08-30
-      </span>
-      <span class="archive-post-title">
-        <a href="/post/scrapy_crawl_skills/scrapy_data_to_mysql/" class="archive-post-link">
-          Scrapy爬取数据保存mysql的方法
-        </a>
-      </span>
-    </div>
-  
-</section>
-
-
-
-
-
 
   
-  
+
   
 
   
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-
-
-
 
         </div>
       </div>

@@ -3,6 +3,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sundxfansky.github.io/post/scrapy_crawl_skills/virturalenv_skills/</loc>
+    <lastmod>2018-09-01T23:33:21+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://sundxfansky.github.io/post/scrapy_crawl_skills/scrapy_user_agent/</loc>
     <lastmod>2018-09-01T00:13:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -234,7 +241,7 @@
   
   <url>
     <loc>https://sundxfansky.github.io/post/</loc>
-    <lastmod>2018-09-01T00:13:23+08:00</lastmod>
+    <lastmod>2018-09-01T23:33:21+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -248,14 +255,14 @@
   
   <url>
     <loc>https://sundxfansky.github.io/categories/python/</loc>
-    <lastmod>2018-09-01T00:13:23+08:00</lastmod>
+    <lastmod>2018-09-01T23:33:21+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://sundxfansky.github.io/tags/scrapy/</loc>
-    <lastmod>2018-09-01T00:13:23+08:00</lastmod>
+    <lastmod>2018-09-01T23:33:21+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -353,7 +360,7 @@
   
   <url>
     <loc>https://sundxfansky.github.io/</loc>
-    <lastmod>2018-09-01T00:13:23+08:00</lastmod>
+    <lastmod>2018-09-01T23:33:21+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

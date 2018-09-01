@@ -61,7 +61,7 @@
 <meta property="og:description" content="一个偷偷写东西的地方" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://sundxfansky.github.io/" />
-<meta property="og:updated_time" content="2011-08-30T16:01:23&#43;08:00"/>
+<meta property="og:updated_time" content="2014-03-10T00:00:00&#43;00:00"/>
 <meta itemprop="name" content="Tonser&#39;s blog">
 <meta itemprop="description" content="一个偷偷写东西的地方">
 
@@ -279,6 +279,40 @@
   <section id="posts" class="posts">
     
     
+    
+      <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/migrate-from-jekyll/">Migrate to Hugo from Jekyll</a></h1>
+    
+    <div class="post-meta">
+      <span class="post-time"> 2014-03-10 </span>
+      <div class="post-category">
+          <a href="https://sundxfansky.github.io/categories/development/"> Development </a>
+          <a href="https://sundxfansky.github.io/categories/golang/"> golang </a>
+          <a href="https://sundxfansky.github.io/categories/index/"> index </a>
+          
+        </div>
+      <span class="more-meta"> 约 901 字 </span>
+      <span class="more-meta"> 预计阅读 5 分钟 </span>
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+1 2 3  ▾ &lt;root&gt;/ ▾ images/ logo.png   should become
+1 2 3 4  ▾ &lt;root&gt;/ ▾ static/ ▾ images/ logo.png   Additionally, you&rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.
+    </div>
+    <div class="read-more">
+      <a href="/post/migrate-from-jekyll/" class="read-more-link">阅读全文</a>
+    </div>
+    
+  </div>
+</article>
+
     
       <article class="post bg-white">
   <header class="post-header">
