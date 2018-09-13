@@ -6,10 +6,50 @@
     <description>Recent content in 课余 on Tonser&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 29 Aug 2018 22:54:54 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 04 Sep 2018 18:33:53 +0800</lastBuildDate>
     
 	<atom:link href="https://sundxfansky.github.io/categories/%E8%AF%BE%E4%BD%99/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Scrapy爬取图片与记录路径</title>
+      <link>https://sundxfansky.github.io/post/scrapy_crawl_skills/scrapy_download_img/</link>
+      <pubDate>Tue, 04 Sep 2018 18:33:53 +0800</pubDate>
+      
+      <guid>https://sundxfansky.github.io/post/scrapy_crawl_skills/scrapy_download_img/</guid>
+      <description>&lt;p&gt;我们利用scrapy提供的默认的下载图片的pipline来完成利用scrapy爬取图片在&lt;code&gt;scrapy.pipelines.images.ImagesPipeline&lt;/code&gt;文件中给出了scrapy默认爬取图片的设置，我们只需进行自己单独的设置：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Mac下使用virtualenv搭建python的虚拟环境</title>
+      <link>https://sundxfansky.github.io/post/scrapy_crawl_skills/virturalenv_skills/</link>
+      <pubDate>Sat, 01 Sep 2018 23:33:21 +0800</pubDate>
+      
+      <guid>https://sundxfansky.github.io/post/scrapy_crawl_skills/virturalenv_skills/</guid>
+      <description>&lt;p&gt;使用虚拟环境的好处是不会影响系统的环境，可以每开发一个python项目就使用一个虚拟环境，方便管理包，也避免了无用的包。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用Middleware设置scrapy的User-Agent代理池</title>
+      <link>https://sundxfansky.github.io/post/scrapy_crawl_skills/scrapy_user_agent/</link>
+      <pubDate>Sat, 01 Sep 2018 00:13:23 +0800</pubDate>
+      
+      <guid>https://sundxfansky.github.io/post/scrapy_crawl_skills/scrapy_user_agent/</guid>
+      <description>&lt;p&gt;使用scrapy爬虫时可能会遇到服务器检测爬虫客户端的headers中user-agent，当被检测到同一个IP地址同一个user-agent有类似爬虫的行为时，服务器会对访问作出一些限制，用来保护正常访问的用户，这无疑对爬虫用户不太友好，本文介绍如何使用user-agent代理池破除这一限制。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Scrapy爬取数据保存mysql的方法</title>
+      <link>https://sundxfansky.github.io/post/scrapy_crawl_skills/scrapy_data_to_mysql/</link>
+      <pubDate>Thu, 30 Aug 2018 20:24:09 +0800</pubDate>
+      
+      <guid>https://sundxfansky.github.io/post/scrapy_crawl_skills/scrapy_data_to_mysql/</guid>
+      <description>&lt;p&gt;使用scarpy构建自己的爬虫系统非常简单，本文给出了两种在爬取数据后将数据保存到数据库的方法.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>短评--互联网大数据分析用户情感？</title>

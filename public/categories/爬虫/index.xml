@@ -6,10 +6,19 @@
     <description>Recent content in 爬虫 on Tonser&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 01 Sep 2018 00:13:23 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 04 Sep 2018 18:33:53 +0800</lastBuildDate>
     
 	<atom:link href="https://sundxfansky.github.io/categories/%E7%88%AC%E8%99%AB/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Scrapy爬取图片与记录路径</title>
+      <link>https://sundxfansky.github.io/post/scrapy_crawl_skills/scrapy_download_img/</link>
+      <pubDate>Tue, 04 Sep 2018 18:33:53 +0800</pubDate>
+      
+      <guid>https://sundxfansky.github.io/post/scrapy_crawl_skills/scrapy_download_img/</guid>
+      <description>&lt;p&gt;我们利用scrapy提供的默认的下载图片的pipline来完成利用scrapy爬取图片在&lt;code&gt;scrapy.pipelines.images.ImagesPipeline&lt;/code&gt;文件中给出了scrapy默认爬取图片的设置，我们只需进行自己单独的设置：&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>使用Middleware设置scrapy的User-Agent代理池</title>

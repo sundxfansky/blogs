@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Mac下使用virtualenv搭建python的虚拟环境 - Tonser&#39;s blog</title>
+  <title>Scrapy爬取图片与记录路径 - Tonser&#39;s blog</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -25,7 +25,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Tonser" />
-  <meta name="description" content="使用虚拟环境的好处是不会影响系统的环境，可以每开发一个python项目就使用一个虚拟环境，方便管理包，也避免了无用的包。 " />
+  <meta name="description" content="我们利用scrapy提供的默认的下载图片的pipline来完成利用scrapy爬取图片在scrapy.pipelines.images.ImagesPipeline文件中给出了scrapy默认爬取图片的设置，我们只需进行自己单独的设置：
+" />
 
   <meta name="keywords" content="Tonser, blog, jane" />
 
@@ -37,7 +38,7 @@
 <meta name="generator" content="Hugo 0.47.1" />
 
 
-<link rel="canonical" href="https://sundxfansky.github.io/post/scrapy_crawl_skills/virturalenv_skills/" />
+<link rel="canonical" href="https://sundxfansky.github.io/post/scrapy_crawl_skills/scrapy_download_img/" />
 
 
 
@@ -57,28 +58,25 @@
 
 
 
-<meta property="og:title" content="Mac下使用virtualenv搭建python的虚拟环境" />
-<meta property="og:description" content="使用虚拟环境的好处是不会影响系统的环境，可以每开发一个python项目就使用一个虚拟环境，方便管理包，也避免了无用的包。
-" />
+<meta property="og:title" content="Scrapy爬取图片与记录路径" />
+<meta property="og:description" content="我们利用scrapy提供的默认的下载图片的pipline来完成利用scrapy爬取图片在scrapy.pipelines.images.ImagesPipeline文件中给出了scrapy默认爬取图片的设置，我们只需进行自己单独的设置：" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://sundxfansky.github.io/post/scrapy_crawl_skills/virturalenv_skills/" /><meta property="article:published_time" content="2018-09-01T23:33:21&#43;08:00"/>
-<meta property="article:modified_time" content="2018-09-01T23:33:21&#43;08:00"/>
-<meta itemprop="name" content="Mac下使用virtualenv搭建python的虚拟环境">
-<meta itemprop="description" content="使用虚拟环境的好处是不会影响系统的环境，可以每开发一个python项目就使用一个虚拟环境，方便管理包，也避免了无用的包。
-">
+<meta property="og:url" content="https://sundxfansky.github.io/post/scrapy_crawl_skills/scrapy_download_img/" /><meta property="article:published_time" content="2018-09-04T18:33:53&#43;08:00"/>
+<meta property="article:modified_time" content="2018-09-04T18:33:53&#43;08:00"/>
+<meta itemprop="name" content="Scrapy爬取图片与记录路径">
+<meta itemprop="description" content="我们利用scrapy提供的默认的下载图片的pipline来完成利用scrapy爬取图片在scrapy.pipelines.images.ImagesPipeline文件中给出了scrapy默认爬取图片的设置，我们只需进行自己单独的设置：">
 
 
-<meta itemprop="datePublished" content="2018-09-01T23:33:21&#43;08:00" />
-<meta itemprop="dateModified" content="2018-09-01T23:33:21&#43;08:00" />
-<meta itemprop="wordCount" content="572">
+<meta itemprop="datePublished" content="2018-09-04T18:33:53&#43;08:00" />
+<meta itemprop="dateModified" content="2018-09-04T18:33:53&#43;08:00" />
+<meta itemprop="wordCount" content="358">
 
 
 
-<meta itemprop="keywords" content="“scrapy”," />
+<meta itemprop="keywords" content="“scrapy”,image," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Mac下使用virtualenv搭建python的虚拟环境"/>
-<meta name="twitter:description" content="使用虚拟环境的好处是不会影响系统的环境，可以每开发一个python项目就使用一个虚拟环境，方便管理包，也避免了无用的包。
-"/>
+<meta name="twitter:title" content="Scrapy爬取图片与记录路径"/>
+<meta name="twitter:description" content="我们利用scrapy提供的默认的下载图片的pipline来完成利用scrapy爬取图片在scrapy.pipelines.images.ImagesPipeline文件中给出了scrapy默认爬取图片的设置，我们只需进行自己单独的设置："/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -289,17 +287,18 @@
           <article class="post bg-white">
     
     <header class="post-header">
-      <h1 class="post-title">Mac下使用virtualenv搭建python的虚拟环境</h1>
+      <h1 class="post-title">Scrapy爬取图片与记录路径</h1>
       
       <div class="post-meta">
-        <span class="post-time"> 2018-09-01 </span>
+        <span class="post-time"> 2018-09-04 </span>
         <div class="post-category">
             <a href="https://sundxfansky.github.io/categories/python/"> python </a>
+            <a href="https://sundxfansky.github.io/categories/%E7%88%AC%E8%99%AB/"> 爬虫 </a>
             <a href="https://sundxfansky.github.io/categories/%E8%AF%BE%E4%BD%99/"> 课余 </a>
             
           </div>
-        <span class="more-meta"> 约 572 字 </span>
-          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        <span class="more-meta"> 约 358 字 </span>
+          <span class="more-meta"> 预计阅读 1 分钟 </span>
 
         
         
@@ -318,78 +317,83 @@
 <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content">
-    <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#安装">安装</a></li>
-</ul></li>
-</ul>
-</nav>
+    
   </div>
 </div>
 
     
     <div class="post-content">
-      <p>使用虚拟环境的好处是不会影响系统的环境，可以每开发一个python项目就使用一个虚拟环境，方便管理包，也避免了无用的包。
-</p>
+      <p>我们利用scrapy提供的默认的下载图片的pipline来完成利用scrapy爬取图片在<code>scrapy.pipelines.images.ImagesPipeline</code>文件中给出了scrapy默认爬取图片的设置，我们只需进行自己单独的设置：</p>
 
-<h2 id="安装">安装</h2>
-
-<p>建议安装 virtualenv与virtualenvwrapper
-Virtaulenvwrapper是virtualenv的扩展包，可以更方便地新增，删除，复制，切换虚拟环境。
-终端下安装方法：</p>
+<p>首先需要设置一下自己的Item，在Item的内容设置一项：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">sudo  pip install virtualenv
-sudo pip install virtualenvwrapper</pre></td></tr></table>
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">JobboleArticleItem</span><span class="p">(</span><span class="n">scrapy</span><span class="o">.</span><span class="n">Item</span><span class="p">):</span>
+    <span class="c1">#用于下载的图片链接</span>
+    <span class="n">front_image_url</span> <span class="o">=</span> <span class="n">scrapy</span><span class="o">.</span><span class="n">Field</span><span class="p">()</span>
+    <span class="c1">#储存图片的路径</span>
+    <span class="n">front_image_path</span> <span class="o">=</span> <span class="n">scrapy</span><span class="o">.</span><span class="n">Field</span><span class="p">()</span></code></pre></td></tr></table>
 </div>
 </div>
-<p>而后可以配置<code>virtualenvwrapper</code>：
-下面是安装的虚拟环境的位置:</p>
+<p>对于储存图片的路径，需要重写<code>ImagesPipeline</code>类下面的<code>item_completed</code>函数：
+在<code>pipeline</code>中设置写好数据传输：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">export WORKON_HOME=&#39;~/to/your/path&#39;
-source /usr/local/bin/virtualenvwrapper.sh</pre></td></tr></table>
-</div>
-</div>
-<p>将其写入终端的配置文件中,例如如果使用bash，则添加到<code>~/.bashrc</code>中；如果使用zsh，则添加到<code>~/.zshrc</code>中,或者常用的用户配置文件<code>~/.bash_profile</code>.
-之后需要source一下生效：
-source <code>~/.bash_profile</code></p>
-
-<p>使用方法：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
-</span><span class="lnt">7
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">查看帮助：virtualenvwrapper --help 
-创建基本环境：mkvirtualenv [环境名]
-删除环境：rmvirtualenv [环境名]
-激活环境：workon [环境名]
-退出环境：deactivate
-列出所有环境：workon或者lsvirtualenv -b
-安装指定版本的python 环境：mkvirtualenv -p python3 artical_spider</pre></td></tr></table>
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">ArticleImagesPipeline</span><span class="p">(</span><span class="n">ImagesPipeline</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">item_completed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">results</span><span class="p">,</span> <span class="n">item</span><span class="p">,</span> <span class="n">info</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">flag</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
+            <span class="n">image_path</span> <span class="o">=</span> <span class="n">value</span><span class="p">[</span><span class="s1">&#39;path&#39;</span><span class="p">]</span>
+        <span class="n">item</span><span class="p">[</span><span class="s2">&#34;front_image_path&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="n">image_path</span>
+        <span class="k">return</span> <span class="n">item</span></code></pre></td></tr></table>
 </div>
 </div>
-<p>之后在该环境下安装使用包不会影响系统python或者其他python环境的包，非常方便。</p>
-
-<p>在scrapy开发的时候可以使用这种方法，在pycharm的设置中需要在如图设置：
-<img src="/image/pycharm_settings.png" alt="pycharm设置" /></p>
+<p>在<code>settings</code>文件中设置：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">IMAGES_URLS_FIELD</span> <span class="o">=</span> <span class="s2">&#34;front_image_url&#34;</span>
+<span class="n">project_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+<span class="n">IMAGES_STORE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="s1">&#39;images&#39;</span><span class="p">)</span>
+<span class="c1">#图片限制大小</span>
+<span class="c1"># IMAGES_MIN_HEIGHT = 100</span>
+<span class="c1"># IMAGES_MIN_WIDTH = 100</span>
+<span class="n">ITEM_PIPELINES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="c1"># &#39;article_spider.pipelines.ArticleSpiderPipeline&#39;: 300,</span>
+    <span class="s1">&#39;scrapy.pipelines.images.ImagesPipeline&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s1">&#39;article_spider.pipelines.ArticleImagesPipeline&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="c1"># &#39;article_spider.pipelines.MysqlTwistedPipeline&#39;: 1,</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>其中储存文件为根目录下的<code>image</code>文件。</p>
     </div>
 
     
@@ -401,7 +405,7 @@ source <code>~/.bash_profile</code></p>
   </p>
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
-    <span class="item-content">2018-09-01</span>
+    <span class="item-content">2018-09-04</span>
   </p>
   
   <p class="copyright-item">
@@ -416,20 +420,16 @@ source <code>~/.bash_profile</code></p>
     <footer class="post-footer">
       <div class="post-tags">
           <a href="https://sundxfansky.github.io/tags/scrapy/">“scrapy”</a>
+          <a href="https://sundxfansky.github.io/tags/image/">image</a>
           
         </div>
 
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/scrapy_crawl_skills/scrapy_download_img/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Scrapy爬取图片与记录路径</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
         
-          <a class="next" href="/post/scrapy_crawl_skills/scrapy_user_agent/">
-            <span class="next-text nav-default">使用Middleware设置scrapy的User-Agent代理池</span>
+          <a class="next" href="/post/scrapy_crawl_skills/virturalenv_skills/">
+            <span class="next-text nav-default">Mac下使用virtualenv搭建python的虚拟环境</span>
             <span class="prev-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>

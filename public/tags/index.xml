@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Tonser&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 01 Sep 2018 00:13:23 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 04 Sep 2018 18:33:53 +0800</lastBuildDate>
     
 	<atom:link href="https://sundxfansky.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Image</title>
+      <link>https://sundxfansky.github.io/tags/image/</link>
+      <pubDate>Tue, 04 Sep 2018 18:33:53 +0800</pubDate>
+      
+      <guid>https://sundxfansky.github.io/tags/image/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Mysql</title>
@@ -23,7 +32,7 @@
     <item>
       <title>Scrapy</title>
       <link>https://sundxfansky.github.io/tags/scrapy/</link>
-      <pubDate>Sat, 01 Sep 2018 23:33:21 +0800</pubDate>
+      <pubDate>Tue, 04 Sep 2018 18:33:53 +0800</pubDate>
       
       <guid>https://sundxfansky.github.io/tags/scrapy/</guid>
       <description></description>

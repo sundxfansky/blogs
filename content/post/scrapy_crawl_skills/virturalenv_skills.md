@@ -4,7 +4,7 @@ date: 2018-09-01T23:33:21.513+08:00
 lastmod: 2018-09-01T23:33:21.513+08:00
 draft: false
 tags: [“scrapy”]
-categories: ["python"]
+categories: ["python", "课余"]
 author: "Tonser"
 
 # You can also close(false) or open(true) something for this content.
