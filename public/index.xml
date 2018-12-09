@@ -6,10 +6,143 @@
     <description>Recent content on Tonser&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 22 Sep 2018 21:13:34 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 09 Dec 2018 16:30:37 +0800</lastBuildDate>
     
         <atom:link href="https://sundxfansky.club/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>本博客的部署说明</title>
+      <link>https://sundxfansky.club/post/uav_lab/blog_record/</link>
+      <pubDate>Sun, 09 Dec 2018 16:30:37 +0800</pubDate>
+      
+      <guid>https://sundxfansky.club/post/uav_lab/blog_record/</guid>
+      
+        <description>&lt;h1 id=&#34;有关本博客的部署&#34;&gt;有关本博客的部署&lt;/h1&gt;
+
+&lt;p&gt;Hugo+jane主题在github上部署，并启用私人域名
+有段时间没弄了，今天正好有个下午空闲，更新一下博客，顺便重新部署一下，理清一下思路
+&lt;/p&gt;
+
+&lt;h2 id=&#34;github&#34;&gt;github&lt;/h2&gt;
+
+&lt;p&gt;本博客使用github的博客部署系统，有300m的免费空间，一般情况下使用是足够了。&lt;/p&gt;
+
+&lt;h2 id=&#34;hugo-框架&#34;&gt;hugo 框架&lt;/h2&gt;
+
+&lt;p&gt;使用的框架是hugo，基于go语言的最快的静态网页框架，比其他的网页编译要快很多，而且编写的时候支持本地实时的查看，用起来就很方便
+使用的语言是GO语言，google 开发的据说是性能最好的服务器语言&lt;/p&gt;
+
+&lt;h2 id=&#34;初始化&#34;&gt;初始化&lt;/h2&gt;
+
+&lt;p&gt;建站过程参考&lt;a href=&#34;https://github.com/xianmin/hugo-theme-jane/blob/master/README-zh.md&#34;&gt;Hugo-them-jane&lt;/a&gt;
+有些内容需要注意：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;hugo的使用方法是hugo server 会在本地生成 &lt;code&gt;localhost:1313&lt;/code&gt;的实时网址，在建站的过程中可以自己查看效果&lt;/li&gt;
+&lt;li&gt;hugo生成的静态网站放在&lt;code&gt;public&lt;/code&gt;目录中&lt;/li&gt;
+&lt;li&gt;Github的建站方法是建立一个仓库，名字为&lt;code&gt;yourname.github.io&lt;/code&gt;这样会自动生成自己的page，需要把自己的pubic文件与其同步。&lt;/li&gt;
+&lt;li&gt;可以先删除pubic 文件，然后在命令行下输入&lt;code&gt;git remote add origin your/git/address.git&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;最后在命令行下重新生成网站&lt;code&gt;hugo&lt;/code&gt; 将public下的文件push到自己远程仓库&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;绑定自己的域名&#34;&gt;绑定自己的域名&lt;/h2&gt;
+
+&lt;p&gt;可以在public，下面自己新建一个CNAME文件，内部填写自己的域名，在hugo的主题设置里面也需要填写好自己的域名，同时需要在域名商处解析域名，同样使用CNAME
+可以参考&lt;a href=&#34;https://blog.csdn.net/kesixin/article/details/78015934&#34;&gt;域名解析&lt;/a&gt;
+我是用的是腾讯云的免费解析如图
+&lt;center&gt;&lt;img src=&#34;https://sundxfansky.club/image/解析.jpg&#34; alt=&#34;云解析&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;彩蛋-交大初雪&#34;&gt;彩蛋-交大初雪&lt;/h1&gt;
+
+&lt;p&gt;2018年12月8日 交大初雪-朋友圈最佳
+&lt;center&gt;&lt;video id=&#34;media&#34; src=&#34;https://sundxfansky.club/video/sjtu_snow.mp4&#34; controls width=&#34;720px&#34; heigt=&#34;408px&#34;&gt;&lt;/video&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;使用脚本一键发布&#34;&gt;使用脚本一键发布&lt;/h1&gt;
+
+&lt;p&gt;在完成上述过程后（主要是public的文件夹需要自己设置一下），可以使用一键脚本发布，十分方便&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; -e &lt;span class=&#34;s2&#34;&gt;&amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Build the project.
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;hugo &lt;span class=&#34;c1&#34;&gt;# if using a theme, replace with `hugo -t &amp;lt;YOURTHEME&amp;gt;`
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
+git add .
+
+&lt;span class=&#34;c1&#34;&gt;# Commit changes.
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;msg&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;update hugo file  `date`&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$#&lt;/span&gt; -eq &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;msg&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$msg&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Push source and build repos.
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;git push origin master
+
+&lt;span class=&#34;c1&#34;&gt;# Go To Public folder
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; public
+&lt;span class=&#34;c1&#34;&gt;# Add changes to git.
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;git add .
+
+&lt;span class=&#34;c1&#34;&gt;# Commit changes.
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;msg&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;update blog web `date`&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$#&lt;/span&gt; -eq &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;msg&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$msg&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Push source and build repos.
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;git push origin master
+
+&lt;span class=&#34;c1&#34;&gt;# Come Back up to the Project Root
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ..&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+      
+    </item>
     
     <item>
       <title>树莓派安装ubuntu-server系统后安装图像化界面的问题</title>

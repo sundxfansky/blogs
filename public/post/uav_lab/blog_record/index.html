@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>归档 - Tonser&#39;s blog</title>
+  <title>本博客的部署说明 - Tonser&#39;s blog</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Tonser" />
-  <meta name="description" content="一个偷偷写东西的地方" />
+  <meta name="description" content="有关本博客的部署 Hugo&#43;jane主题在github上部署，并启用私人域名 有段时间没弄了，今天正好有个下午空闲，更新一下博客，顺便重新部署一下，理清一下思路 " />
+
   <meta name="keywords" content="Tonser, blog, jane" />
 
 
@@ -34,8 +35,7 @@
 <meta name="generator" content="Hugo 0.47" />
 
 
-<link rel="canonical" href="https://sundxfansky.club/post/" />
-<link href="https://sundxfansky.club/post/index.xml" rel="alternate" type="application/rss+xml" title="Tonser&#39;s blog" />
+<link rel="canonical" href="https://sundxfansky.club/post/uav_lab/blog_record/" />
 
 
 
@@ -57,17 +57,37 @@
 
 
 
-<meta property="og:title" content="Posts" />
-<meta property="og:description" content="一个偷偷写东西的地方" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://sundxfansky.club/post/" />
-<meta property="og:updated_time" content="2018-12-09T16:30:37&#43;08:00"/>
-<meta itemprop="name" content="Posts">
-<meta itemprop="description" content="一个偷偷写东西的地方">
+<meta property="og:title" content="本博客的部署说明" />
+<meta property="og:description" content="有关本博客的部署
 
+Hugo&#43;jane主题在github上部署，并启用私人域名
+有段时间没弄了，今天正好有个下午空闲，更新一下博客，顺便重新部署一下，理清一下思路
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sundxfansky.club/post/uav_lab/blog_record/" /><meta property="article:published_time" content="2018-12-09T16:30:37&#43;08:00"/>
+<meta property="article:modified_time" content="2018-12-09T16:30:37&#43;08:00"/>
+<meta itemprop="name" content="本博客的部署说明">
+<meta itemprop="description" content="有关本博客的部署
+
+Hugo&#43;jane主题在github上部署，并启用私人域名
+有段时间没弄了，今天正好有个下午空闲，更新一下博客，顺便重新部署一下，理清一下思路
+">
+
+
+<meta itemprop="datePublished" content="2018-12-09T16:30:37&#43;08:00" />
+<meta itemprop="dateModified" content="2018-12-09T16:30:37&#43;08:00" />
+<meta itemprop="wordCount" content="815">
+
+
+
+<meta itemprop="keywords" content="Blog,Hugo," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="一个偷偷写东西的地方"/>
+<meta name="twitter:title" content="本博客的部署说明"/>
+<meta name="twitter:description" content="有关本博客的部署
+
+Hugo&#43;jane主题在github上部署，并启用私人域名
+有段时间没弄了，今天正好有个下午空闲，更新一下博客，顺便重新部署一下，理清一下思路
+"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -222,7 +242,7 @@
 
       </li>
     
-        <li class="menu-item active">
+        <li class="menu-item">
         
           
           
@@ -276,135 +296,254 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
-          
-<section id="archive" class="archive">
-    <div class="archive-title">
-      <span class="archive-post-counter">
-          共计 8 篇文章
-      </span>
-    </div>
+          <article class="post bg-white">
     
-      <div class="collection-title">
-        <h2 class="archive-year">2018</h2>
+    <header class="post-header">
+      <h1 class="post-title">本博客的部署说明</h1>
+      
+      <div class="post-meta">
+        <time datetime="2018-12-09" class="post-time">
+          2018-12-09
+        </time>
+        <div class="post-category">
+            <a href="https://sundxfansky.club/categories/hugo/"> Hugo </a>
+            <a href="https://sundxfansky.club/categories/uav_lab/"> UAV_LAB </a>
+            
+          </div>
+        <span class="more-meta"> 约 815 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+
+        
+        
+
+        
+        
       </div>
+    </header>
 
-    <div class="archive-post">
-      <time datetime="2018-12-09" class="archive-post-time">
-        2018-12-09
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/uav_lab/blog_record/" class="archive-post-link">
-          本博客的部署说明
-        </a>
-      </span>
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#有关本博客的部署">有关本博客的部署</a>
+<ul>
+<li><a href="#github">github</a></li>
+<li><a href="#hugo-框架">hugo 框架</a></li>
+<li><a href="#初始化">初始化</a></li>
+<li><a href="#绑定自己的域名">绑定自己的域名</a></li>
+</ul></li>
+<li><a href="#彩蛋-交大初雪">彩蛋-交大初雪</a></li>
+<li><a href="#使用脚本一键发布">使用脚本一键发布</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <h1 id="有关本博客的部署">有关本博客的部署</h1>
+
+<p>Hugo+jane主题在github上部署，并启用私人域名
+有段时间没弄了，今天正好有个下午空闲，更新一下博客，顺便重新部署一下，理清一下思路
+</p>
+
+<h2 id="github">github</h2>
+
+<p>本博客使用github的博客部署系统，有300m的免费空间，一般情况下使用是足够了。</p>
+
+<h2 id="hugo-框架">hugo 框架</h2>
+
+<p>使用的框架是hugo，基于go语言的最快的静态网页框架，比其他的网页编译要快很多，而且编写的时候支持本地实时的查看，用起来就很方便
+使用的语言是GO语言，google 开发的据说是性能最好的服务器语言</p>
+
+<h2 id="初始化">初始化</h2>
+
+<p>建站过程参考<a href="https://github.com/xianmin/hugo-theme-jane/blob/master/README-zh.md">Hugo-them-jane</a>
+有些内容需要注意：</p>
+
+<ul>
+<li>hugo的使用方法是hugo server 会在本地生成 <code>localhost:1313</code>的实时网址，在建站的过程中可以自己查看效果</li>
+<li>hugo生成的静态网站放在<code>public</code>目录中</li>
+<li>Github的建站方法是建立一个仓库，名字为<code>yourname.github.io</code>这样会自动生成自己的page，需要把自己的pubic文件与其同步。</li>
+<li>可以先删除pubic 文件，然后在命令行下输入<code>git remote add origin your/git/address.git</code></li>
+<li>最后在命令行下重新生成网站<code>hugo</code> 将public下的文件push到自己远程仓库</li>
+</ul>
+
+<h2 id="绑定自己的域名">绑定自己的域名</h2>
+
+<p>可以在public，下面自己新建一个CNAME文件，内部填写自己的域名，在hugo的主题设置里面也需要填写好自己的域名，同时需要在域名商处解析域名，同样使用CNAME
+可以参考<a href="https://blog.csdn.net/kesixin/article/details/78015934">域名解析</a>
+我是用的是腾讯云的免费解析如图
+<center><img src="/image/解析.jpg" alt="云解析" /></center></p>
+
+<h1 id="彩蛋-交大初雪">彩蛋-交大初雪</h1>
+
+<p>2018年12月8日 交大初雪-朋友圈最佳
+<center><video id="media" src="/video/sjtu_snow.mp4" controls width="720px" heigt="408px"></video></center></p>
+
+<h1 id="使用脚本一键发布">使用脚本一键发布</h1>
+
+<p>在完成上述过程后（主要是public的文件夹需要自己设置一下），可以使用一键脚本发布，十分方便</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
+</span><span class="cp"></span>
+<span class="nb">echo</span> -e <span class="s2">&#34;\033[0;32mDeploying updates to GitHub...\033[0m&#34;</span>
+
+<span class="c1"># Build the project.
+</span><span class="c1"></span>hugo <span class="c1"># if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`
+</span><span class="c1"></span>
+git add .
+
+<span class="c1"># Commit changes.
+</span><span class="c1"></span><span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;update hugo file  `date`&#34;</span>
+
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$#</span> -eq <span class="m">1</span> <span class="o">]</span>
+  <span class="k">then</span> <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+<span class="k">fi</span>
+git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
+
+<span class="c1"># Push source and build repos.
+</span><span class="c1"></span>git push origin master
+
+<span class="c1"># Go To Public folder
+</span><span class="c1"></span><span class="nb">cd</span> public
+<span class="c1"># Add changes to git.
+</span><span class="c1"></span>git add .
+
+<span class="c1"># Commit changes.
+</span><span class="c1"></span><span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;update blog web `date`&#34;</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$#</span> -eq <span class="m">1</span> <span class="o">]</span>
+  <span class="k">then</span> <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+<span class="k">fi</span>
+git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
+
+<span class="c1"># Push source and build repos.
+</span><span class="c1"></span>git push origin master
+
+<span class="c1"># Come Back up to the Project Root
+</span><span class="c1"></span><span class="nb">cd</span> ..</code></pre></td></tr></table>
+</div>
+</div>
     </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Tonser</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2018-12-09</span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
     
 
-    <div class="archive-post">
-      <time datetime="2018-09-22" class="archive-post-time">
-        2018-09-22
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/uav_lab/raspberry_pi/" class="archive-post-link">
-          树莓派安装ubuntu-server系统后安装图像化界面的问题
-        </a>
-      </span>
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="https://sundxfansky.club/tags/blog/">Blog</a>
+          <a href="https://sundxfansky.club/tags/hugo/">Hugo</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/uav_lab/raspberry_pi/">
+            <span class="next-text nav-default">树莓派安装ubuntu-server系统后安装图像化界面的问题</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+  
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "sundxfansky/comments_blog"
+            issue-term="pathname"
+            crossorigin="anonymous"
+            async>
+      </script>
     </div>
+  
+
+  
+
+  
+
+  
+  
     
-
-    <div class="archive-post">
-      <time datetime="2018-09-13" class="archive-post-time">
-        2018-09-13
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/scrapy_crawl_skills/scrapy_debug/" class="archive-post-link">
-          Scrapy的Debug方法
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2018-09-04" class="archive-post-time">
-        2018-09-04
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/scrapy_crawl_skills/scrapy_download_img/" class="archive-post-link">
-          Scrapy爬取图片与记录路径
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2018-09-01" class="archive-post-time">
-        2018-09-01
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/scrapy_crawl_skills/virturalenv_skills/" class="archive-post-link">
-          Mac下使用virtualenv搭建python的虚拟环境
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2018-09-01" class="archive-post-time">
-        2018-09-01
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/scrapy_crawl_skills/scrapy_user_agent/" class="archive-post-link">
-          使用Middleware设置scrapy的User-Agent代理池
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2018-08-30" class="archive-post-time">
-        2018-08-30
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/scrapy_crawl_skills/scrapy_data_to_mysql/" class="archive-post-link">
-          Scrapy爬取数据保存mysql的方法
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2018-08-29" class="archive-post-time">
-        2018-08-29
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/comments_of_sillicon_valley_letters/letter3/" class="archive-post-link">
-          短评--互联网大数据分析用户情感？
-        </a>
-      </span>
-    </div></section>
-
-
-
-
-
-
-  
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-
 
 
 

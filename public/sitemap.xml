@@ -3,6 +3,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sundxfansky.club/post/uav_lab/blog_record/</loc>
+    <lastmod>2018-12-09T16:30:37+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://sundxfansky.club/post/uav_lab/raspberry_pi/</loc>
     <lastmod>2018-09-22T21:13:34+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -59,6 +66,13 @@
   </url>
   
   <url>
+    <loc>https://sundxfansky.club/tags/blog/</loc>
+    <lastmod>2018-12-09T16:30:37+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://sundxfansky.club/categories/</loc>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
@@ -67,6 +81,20 @@
   <url>
     <loc>https://sundxfansky.club/tags/debug/</loc>
     <lastmod>2018-09-22T21:13:34+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sundxfansky.club/tags/hugo/</loc>
+    <lastmod>2018-12-09T16:30:37+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sundxfansky.club/categories/hugo/</loc>
+    <lastmod>2018-12-09T16:30:37+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -87,7 +115,7 @@
   
   <url>
     <loc>https://sundxfansky.club/post/</loc>
-    <lastmod>2018-09-22T21:13:34+08:00</lastmod>
+    <lastmod>2018-12-09T16:30:37+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -115,21 +143,21 @@
   
   <url>
     <loc>https://sundxfansky.club/tags/</loc>
-    <lastmod>2018-09-22T21:13:34+08:00</lastmod>
+    <lastmod>2018-12-09T16:30:37+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://sundxfansky.club/</loc>
-    <lastmod>2018-09-22T21:13:34+08:00</lastmod>
+    <lastmod>2018-12-09T16:30:37+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://sundxfansky.club/categories/uav_lab/</loc>
-    <lastmod>2018-09-22T21:13:34+08:00</lastmod>
+    <lastmod>2018-12-09T16:30:37+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

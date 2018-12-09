@@ -6,10 +6,23 @@
     <description>Recent content in Posts on Tonser&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 22 Sep 2018 21:13:34 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 09 Dec 2018 16:30:37 +0800</lastBuildDate>
     
 	<atom:link href="https://sundxfansky.club/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>本博客的部署说明</title>
+      <link>https://sundxfansky.club/post/uav_lab/blog_record/</link>
+      <pubDate>Sun, 09 Dec 2018 16:30:37 +0800</pubDate>
+      
+      <guid>https://sundxfansky.club/post/uav_lab/blog_record/</guid>
+      <description>&lt;h1 id=&#34;有关本博客的部署&#34;&gt;有关本博客的部署&lt;/h1&gt;
+
+&lt;p&gt;Hugo+jane主题在github上部署，并启用私人域名
+有段时间没弄了，今天正好有个下午空闲，更新一下博客，顺便重新部署一下，理清一下思路
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>树莓派安装ubuntu-server系统后安装图像化界面的问题</title>
