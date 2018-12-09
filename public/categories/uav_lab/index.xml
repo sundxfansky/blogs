@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Uav_lab on Tonser&#39;s blog</title>
+    <link>https://sundxfansky.club/categories/uav_lab/</link>
+    <description>Recent content in Uav_lab on Tonser&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 22 Sep 2018 21:13:34 +0800</lastBuildDate>
+    
+	<atom:link href="https://sundxfansky.club/categories/uav_lab/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>test1</title>
+      <link>https://sundxfansky.club/post/uav_lab/test/</link>
+      <pubDate>Sat, 22 Sep 2018 21:13:34 +0800</pubDate>
+      
+      <guid>https://sundxfansky.club/post/uav_lab/test/</guid>
+      <description>树莓派安装Ubuntu系统 直接从ubuntu的官网wiki中下载就好了，注意都是服务器版本的ubuntu，对于树莓派来讲，安装时要求的sd卡</description>
+    </item>
+    
+    <item>
+      <title>树莓派安装ubuntu-server系统后安装图像化界面的问题</title>
+      <link>https://sundxfansky.club/post/uav_lab/raspberry_pi/</link>
+      <pubDate>Sat, 22 Sep 2018 21:13:34 +0800</pubDate>
+      
+      <guid>https://sundxfansky.club/post/uav_lab/raspberry_pi/</guid>
+      <description>树莓派安装Ubuntu系统 直接从ubuntu的官网wiki中下载就好了，注意都是服务器版本的ubuntu，对于树莓派来讲，安装时要求的sd卡</description>
+    </item>
+    
+  </channel>
+</rss>

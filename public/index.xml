@@ -2,21 +2,124 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tonser&#39;s blog</title>
-    <link>https://sundxfansky.github.io/</link>
+    <link>https://sundxfansky.club/</link>
     <description>Recent content on Tonser&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 04 Sep 2018 18:33:53 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 22 Sep 2018 21:13:34 +0800</lastBuildDate>
     
-        <atom:link href="https://sundxfansky.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://sundxfansky.club/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>test1</title>
+      <link>https://sundxfansky.club/post/uav_lab/test/</link>
+      <pubDate>Sat, 22 Sep 2018 21:13:34 +0800</pubDate>
+      
+      <guid>https://sundxfansky.club/post/uav_lab/test/</guid>
+      
+        <description>
+
+&lt;h1 id=&#34;树莓派安装ubuntu系统&#34;&gt;树莓派安装Ubuntu系统&lt;/h1&gt;
+
+&lt;p&gt;直接从ubuntu的官网wiki中下载就好了，注意都是服务器版本的ubuntu，对于树莓派来讲，安装时要求的sd卡品质较好，师兄测试闪迪的效果最好。&lt;/p&gt;
+
+&lt;h1 id=&#34;安装桌面环境&#34;&gt;安装桌面环境&lt;/h1&gt;
+
+&lt;p&gt;ubuntu在原始状态的源不要更改，在更换为国内源之后都出现了can‘t locate pacakge的结果，最终换回原本的源解决，之后装ROS就很顺畅了。&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>树莓派安装ubuntu-server系统后安装图像化界面的问题</title>
+      <link>https://sundxfansky.club/post/uav_lab/raspberry_pi/</link>
+      <pubDate>Sat, 22 Sep 2018 21:13:34 +0800</pubDate>
+      
+      <guid>https://sundxfansky.club/post/uav_lab/raspberry_pi/</guid>
+      
+        <description>
+
+&lt;h1 id=&#34;树莓派安装ubuntu系统&#34;&gt;树莓派安装Ubuntu系统&lt;/h1&gt;
+
+&lt;p&gt;直接从ubuntu的官网wiki中下载就好了，注意都是服务器版本的ubuntu，对于树莓派来讲，安装时要求的sd卡品质较好，师兄测试闪迪的效果最好。&lt;/p&gt;
+
+&lt;h1 id=&#34;安装桌面环境&#34;&gt;安装桌面环境&lt;/h1&gt;
+
+&lt;p&gt;ubuntu在原始状态的源不要更改，在更换为国内源之后都出现了can‘t locate pacakge的结果，最终换回原本的源解决，之后装ROS就很顺畅了。&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Scrapy的Debug方法</title>
+      <link>https://sundxfansky.club/post/scrapy_crawl_skills/scrapy_debug/</link>
+      <pubDate>Thu, 13 Sep 2018 16:14:53 +0800</pubDate>
+      
+      <guid>https://sundxfansky.club/post/scrapy_crawl_skills/scrapy_debug/</guid>
+      
+        <description>&lt;p&gt;在使用scrapy的过程中要注重调试技巧，使用下面的方法可以提升debug的效率：&lt;/p&gt;
+
+&lt;h1 id=&#34;使用main函数调试&#34;&gt;使用main函数调试&lt;/h1&gt;
+
+&lt;p&gt;Scrapy是一个框架，启动爬虫的时候需要在命令行下启动，输入&lt;code&gt;scrapy crawl project_name&lt;/code&gt;我们可以写一个函数实现整个过程，用来进行debug非常方便：
+&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# -*- coding:utf-8 -*-&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;__author__&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;sundxfansky@sjtu.edu.cn&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;scrapy.cmdline&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;execute&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;sys&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;os&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;#下面的路径可以满足，但是需要重新修改&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#sys.path.append(&amp;#34;/Users/sundx/Documents/learn_code/article_spider&amp;#34;)&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;#获取当前目录的父目录&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;sys&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;os&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dirname&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;os&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;abspath&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;vm&#34;&gt;__file__&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execute&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;scrapy&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;crawl&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;jobbole&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;利用scrapy.cmdline中的execute函数表示执行终端下的命令。
+&lt;code&gt;os.path.abspath(__file__)&lt;/code&gt;表示当前文件的目录。&lt;code&gt;os.path.dirname(dir)&lt;/code&gt;表示&lt;code&gt;dir&lt;/code&gt;目录的母目录
+&lt;code&gt;sys.path.append(dir)&lt;/code&gt;表示将当前sys的路径设置在&lt;code&gt;dir&lt;/code&gt;下，从而可以执行&lt;code&gt;execute&lt;/code&gt;命令。&lt;/p&gt;
+
+&lt;h1 id=&#34;pycharm断点调试&#34;&gt;pycharm断点调试&lt;/h1&gt;
+
+&lt;p&gt;在文件中加入断点时执行debug会有两种方法进行，F6单步调试，与F8进行下一步调试，注意观察debug信息与variables，后期会在本文中加入常见的debug信息错误与对应的错误类型&lt;/p&gt;
+
+&lt;h1 id=&#34;数据库入库之前的调试问题&#34;&gt;数据库入库之前的调试问题&lt;/h1&gt;
+
+&lt;p&gt;在数据库入库之前的命令中加入一个断点，便于准确的跟踪数据入库的错误，及时发现。&lt;/p&gt;
+
+&lt;p&gt;&amp;mdash;&amp;mdash;-后续再进行补充&amp;mdash;&amp;mdash;&amp;mdash;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
       <title>Scrapy爬取图片与记录路径</title>
-      <link>https://sundxfansky.github.io/post/scrapy_crawl_skills/scrapy_download_img/</link>
+      <link>https://sundxfansky.club/post/scrapy_crawl_skills/scrapy_download_img/</link>
       <pubDate>Tue, 04 Sep 2018 18:33:53 +0800</pubDate>
       
-      <guid>https://sundxfansky.github.io/post/scrapy_crawl_skills/scrapy_download_img/</guid>
+      <guid>https://sundxfansky.club/post/scrapy_crawl_skills/scrapy_download_img/</guid>
       
         <description>&lt;p&gt;我们利用scrapy提供的默认的下载图片的pipline来完成利用scrapy爬取图片在&lt;code&gt;scrapy.pipelines.images.ImagesPipeline&lt;/code&gt;文件中给出了scrapy默认爬取图片的设置，我们只需进行自己单独的设置：&lt;/p&gt;
 
@@ -94,10 +197,10 @@
     
     <item>
       <title>Mac下使用virtualenv搭建python的虚拟环境</title>
-      <link>https://sundxfansky.github.io/post/scrapy_crawl_skills/virturalenv_skills/</link>
+      <link>https://sundxfansky.club/post/scrapy_crawl_skills/virturalenv_skills/</link>
       <pubDate>Sat, 01 Sep 2018 23:33:21 +0800</pubDate>
       
-      <guid>https://sundxfansky.github.io/post/scrapy_crawl_skills/virturalenv_skills/</guid>
+      <guid>https://sundxfansky.club/post/scrapy_crawl_skills/virturalenv_skills/</guid>
       
         <description>&lt;p&gt;使用虚拟环境的好处是不会影响系统的环境，可以每开发一个python项目就使用一个虚拟环境，方便管理包，也避免了无用的包。
 &lt;/p&gt;
@@ -157,16 +260,16 @@ source &lt;code&gt;~/.bash_profile&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;之后在该环境下安装使用包不会影响系统python或者其他python环境的包，非常方便。&lt;/p&gt;
 
 &lt;p&gt;在scrapy开发的时候可以使用这种方法，在pycharm的设置中需要在如图设置：
-&lt;img src=&#34;https://sundxfansky.github.io/image/pycharm_settings.png&#34; alt=&#34;pycharm设置&#34; /&gt;&lt;/p&gt;</description>
+&lt;img src=&#34;https://sundxfansky.club/image/pycharm_settings.png&#34; alt=&#34;pycharm设置&#34; /&gt;&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>使用Middleware设置scrapy的User-Agent代理池</title>
-      <link>https://sundxfansky.github.io/post/scrapy_crawl_skills/scrapy_user_agent/</link>
+      <link>https://sundxfansky.club/post/scrapy_crawl_skills/scrapy_user_agent/</link>
       <pubDate>Sat, 01 Sep 2018 00:13:23 +0800</pubDate>
       
-      <guid>https://sundxfansky.github.io/post/scrapy_crawl_skills/scrapy_user_agent/</guid>
+      <guid>https://sundxfansky.club/post/scrapy_crawl_skills/scrapy_user_agent/</guid>
       
         <description>&lt;p&gt;使用scrapy爬虫时可能会遇到服务器检测爬虫客户端的headers中user-agent，当被检测到同一个IP地址同一个user-agent有类似爬虫的行为时，服务器会对访问作出一些限制，用来保护正常访问的用户，这无疑对爬虫用户不太友好，本文介绍如何使用user-agent代理池破除这一限制。
 &lt;/p&gt;
@@ -174,7 +277,7 @@ source &lt;code&gt;~/.bash_profile&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&#34;downloadermiddleware-下载器中间件-的使用&#34;&gt;DownloaderMiddleware（下载器中间件） 的使用&lt;/h2&gt;
 
 &lt;p&gt;首先先了解一下scrapy的框架，如图：
-&lt;img src=&#34;https://sundxfansky.github.io/image/scrapy_architecture_02.png&#34; alt=&#34;架构图&#34; /&gt;
+&lt;img src=&#34;https://sundxfansky.club/image/scrapy_architecture_02.png&#34; alt=&#34;架构图&#34; /&gt;
 关于详细的解释后面会专门写一个文章来写，在图中蓝色的方块就是middleware，从图中可以看出有两个middleware，分别是spider和Downloader两个，对于Downloaded的middleware，也就是对scrapy的engine发出的request请求，做一个预处理从而发给服务器去请求html。有关更详细的关于DownloaderMiddleware的描述可以&lt;a href=&#34;https://docs.scrapy.org/en/latest/topics/downloader-middleware.html&#34;&gt;点击官网&lt;/a&gt;查看。&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -368,10 +471,10 @@ source &lt;code&gt;~/.bash_profile&lt;/code&gt;&lt;/p&gt;
     
     <item>
       <title>Scrapy爬取数据保存mysql的方法</title>
-      <link>https://sundxfansky.github.io/post/scrapy_crawl_skills/scrapy_data_to_mysql/</link>
+      <link>https://sundxfansky.club/post/scrapy_crawl_skills/scrapy_data_to_mysql/</link>
       <pubDate>Thu, 30 Aug 2018 20:24:09 +0800</pubDate>
       
-      <guid>https://sundxfansky.github.io/post/scrapy_crawl_skills/scrapy_data_to_mysql/</guid>
+      <guid>https://sundxfansky.club/post/scrapy_crawl_skills/scrapy_data_to_mysql/</guid>
       
         <description>&lt;p&gt;使用scarpy构建自己的爬虫系统非常简单，本文给出了两种在爬取数据后将数据保存到数据库的方法.&lt;/p&gt;
 
@@ -563,10 +666,10 @@ source &lt;code&gt;~/.bash_profile&lt;/code&gt;&lt;/p&gt;
     
     <item>
       <title>短评--互联网大数据分析用户情感？</title>
-      <link>https://sundxfansky.github.io/post/comments_of_sillicon_valley_letters/letter3/</link>
+      <link>https://sundxfansky.club/post/comments_of_sillicon_valley_letters/letter3/</link>
       <pubDate>Wed, 29 Aug 2018 22:54:54 +0800</pubDate>
       
-      <guid>https://sundxfansky.github.io/post/comments_of_sillicon_valley_letters/letter3/</guid>
+      <guid>https://sundxfansky.club/post/comments_of_sillicon_valley_letters/letter3/</guid>
       
         <description>
 
@@ -593,14 +696,14 @@ source &lt;code&gt;~/.bash_profile&lt;/code&gt;&lt;/p&gt;
     
     <item>
       <title>关于Tonser&#39;s blog</title>
-      <link>https://sundxfansky.github.io/about/</link>
+      <link>https://sundxfansky.club/about/</link>
       <pubDate>Wed, 29 Aug 2018 11:29:00 +0800</pubDate>
       
-      <guid>https://sundxfansky.github.io/about/</guid>
+      <guid>https://sundxfansky.club/about/</guid>
       
         <description>
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://sundxfansky.github.io/image/sundx.jpg&#34; alt=&#34;图书馆毕业照&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://sundxfansky.club/image/sundx.jpg&#34; alt=&#34;图书馆毕业照&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;2018年7月12日上海交通大学举办了本科生毕业典礼&#34;&gt;2018年7月12日上海交通大学举办了本科生毕业典礼&lt;/h2&gt;
 

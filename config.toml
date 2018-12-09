@@ -121,7 +121,7 @@ defaultContentLanguage = "zh-cn"           # Default language to use
     gitmentCSS = '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitment@0.0.3/style/default.min.css" crossorigin="anonymous">'
 
   [params.utteranc]         # utteranc is a comment system based on GitHub issues. see https://utteranc.es
-    enable = true
+    enable = false
     repo = "sundxfansky/comments_blog"    # The repo to store comments
     issueTerm = "pathname"
 
@@ -137,7 +137,7 @@ defaultContentLanguage = "zh-cn"           # Default language to use
     alipay = "/path/to/your/alipay-qr-code.png"           # 支付宝二维码
 
   [params.counter.busuanzi]  # a Chinese visitor counter  # 不蒜子计数器
-    enable = true
+    enable = false
 
   [params.counter.leancloud]  # Chinese leancloud visitor counter  # leancloud 计数器
     enable = false
