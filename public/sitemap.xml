@@ -3,6 +3,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sundxfansky.club/post/tkinter/tkinter%E7%BB%84%E4%BB%B6%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2019-01-31T17:19:19+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://sundxfansky.club/post/uav_lab/blog_record/</loc>
     <lastmod>2018-12-09T16:30:37+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -66,12 +73,6 @@
   </url>
   
   <url>
-    <loc>https://sundxfansky.club/post/tkinter/tkinter%E7%BB%84%E4%BB%B6%E8%AE%B0%E5%BD%95/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://sundxfansky.club/tags/blog/</loc>
     <lastmod>2018-12-09T16:30:37+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -121,14 +122,14 @@
   
   <url>
     <loc>https://sundxfansky.club/post/</loc>
-    <lastmod>2018-12-09T16:30:37+08:00</lastmod>
+    <lastmod>2019-01-31T17:19:19+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://sundxfansky.club/categories/python/</loc>
-    <lastmod>2018-09-15T14:03:43+08:00</lastmod>
+    <lastmod>2019-01-31T17:19:19+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -155,8 +156,15 @@
   </url>
   
   <url>
+    <loc>https://sundxfansky.club/tags/tkinter/</loc>
+    <lastmod>2019-01-31T17:19:19+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://sundxfansky.club/</loc>
-    <lastmod>2018-12-09T16:30:37+08:00</lastmod>
+    <lastmod>2019-01-31T17:19:19+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -205,7 +213,7 @@
   
   <url>
     <loc>https://sundxfansky.club/categories/%E8%AF%BE%E4%BD%99/</loc>
-    <lastmod>2018-09-15T14:03:43+08:00</lastmod>
+    <lastmod>2019-01-31T17:19:19+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

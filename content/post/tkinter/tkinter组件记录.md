@@ -1,3 +1,23 @@
+---
+title: "Tkinter 使用记录 python-GUI"
+date: 2019-01-31T17:19:19.657+08:00
+lastmod: 2019-01-31T17:19:19.657+08:00
+draft: false
+tags: [“tkinter”]
+categories: ["python", "课余"]
+author: "Tonser"
+
+# You can also close(false) or open(true) something for this content.
+# P.S. comment can only be closed
+# comment: false
+# toc: false
+# reward: false
+# mathjax: true
+---
+在使用python 写gui时 使用tkinter非常方便，下面是一些记录
+<!--more-->
+
+
 ## 版本
 
 python版本：3.6.5

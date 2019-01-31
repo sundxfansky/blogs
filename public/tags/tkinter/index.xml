@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tkinter on Tonser&#39;s blog</title>
+    <link>https://sundxfansky.club/tags/tkinter/</link>
+    <description>Recent content in Tkinter on Tonser&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 31 Jan 2019 17:19:19 +0800</lastBuildDate>
+    
+	<atom:link href="https://sundxfansky.club/tags/tkinter/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tkinter 使用记录 python-GUI</title>
+      <link>https://sundxfansky.club/post/tkinter/tkinter%E7%BB%84%E4%BB%B6%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Thu, 31 Jan 2019 17:19:19 +0800</pubDate>
+      
+      <guid>https://sundxfansky.club/post/tkinter/tkinter%E7%BB%84%E4%BB%B6%E8%AE%B0%E5%BD%95/</guid>
+      <description>&lt;p&gt;在使用python 写gui时 使用tkinter非常方便，下面是一些记录
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
