@@ -96,5 +96,14 @@
       <description>会被左右的问卷 文中提出了一个很有意思的例子作为佐证，当一个人做了一件错事，比如前几天滴滴顺风车司机的恶劣行为，调查问卷像这样问你的时候： 如果</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://sundxfansky.club/post/tkinter/tkinter%E7%BB%84%E4%BB%B6%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sundxfansky.club/post/tkinter/tkinter%E7%BB%84%E4%BB%B6%E8%AE%B0%E5%BD%95/</guid>
+      <description>版本 python版本：3.6.5 自带 tkinter Entry使用方法 直接通过样例去认识就足够了 1 2 3 4 5 6 7 8 9 import tkinter root=tkinter.Tk() #生成root主窗口 label=tkinter.Label(root,text=&amp;#39;Hello,GUI&amp;#39;) #生成标签 label.pack()</description>
+    </item>
+    
   </channel>
 </rss>

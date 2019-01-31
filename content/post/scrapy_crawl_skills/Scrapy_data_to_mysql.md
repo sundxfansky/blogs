@@ -97,6 +97,7 @@ class MysqlTwistedPipeline(object):
         cursor.execute(insert_sql, params)
 ```
 使用异步的方法，效率较高，且可以轻松应对高并发的大规模爬虫程序，需要注意两点
+
 1.需要在`settings.py`中设置好四个参数，如下：
 ```python
 MYSQL_HOST = "localhost"

@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="zh-cn" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> - Tonser&#39;s blog</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Tonser" />
+  <meta name="description" content="版本 python版本：3.6.5 自带 tkinter Entry使用方法 直接通过样例去认识就足够了 1 2 3 4 5 6 7 8 9 import tkinter root=tkinter.Tk() #生成root主窗口 label=tkinter.Label(root,text=&amp;#39;Hello,GUI&amp;#39;) #生成标签 label.pack()" />
+
+  <meta name="keywords" content="Tonser, blog, jane" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.47" />
+
+
+<link rel="canonical" href="https://sundxfansky.club/post/tkinter/tkinter%E7%BB%84%E4%BB%B6%E8%AE%B0%E5%BD%95/" />
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.aaf3394fc81ccb6f6fe3fe458d1f5b61c39f151e44df83baaf1d7b3775a8b98d.css" integrity="sha256-qvM5T8gcy29v4/5FjR9bYcOfFR5E34O6rx17N3WouY0=" media="screen">
+
+
+
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="版本 python版本：3.6.5 自带 tkinter Entry使用方法 直接通过样例去认识就足够了 1 2 3 4 5 6 7 8 9 import tkinter root=tkinter.Tk() #生成root主窗口 label=tkinter.Label(root,text=&#39;Hello,GUI&#39;) #生成标签 label.pack()" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sundxfansky.club/post/tkinter/tkinter%E7%BB%84%E4%BB%B6%E8%AE%B0%E5%BD%95/" />
+<meta itemprop="name" content="">
+<meta itemprop="description" content="版本 python版本：3.6.5 自带 tkinter Entry使用方法 直接通过样例去认识就足够了 1 2 3 4 5 6 7 8 9 import tkinter root=tkinter.Tk() #生成root主窗口 label=tkinter.Label(root,text=&#39;Hello,GUI&#39;) #生成标签 label.pack()">
+
+
+
+<meta itemprop="wordCount" content="4333">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="版本 python版本：3.6.5 自带 tkinter Entry使用方法 直接通过样例去认识就足够了 1 2 3 4 5 6 7 8 9 import tkinter root=tkinter.Tk() #生成root主窗口 label=tkinter.Label(root,text=&#39;Hello,GUI&#39;) #生成标签 label.pack()"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">细嗅蔷薇</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://sundxfansky.club/">主页</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://sundxfansky.club/post/">文章</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://sundxfansky.club/tags/">标签</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://sundxfansky.club/categories/">分类</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://sundxfansky.club/about/">关于</a>
+          
+        
+      </li>
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      细嗅蔷薇
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://sundxfansky.club/">主页</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://sundxfansky.club/post/">文章</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://sundxfansky.club/tags/">标签</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://sundxfansky.club/categories/">分类</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://sundxfansky.club/about/">关于</a>
+          
+
+        
+
+      </li>
+    
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title"></h1>
+      
+      <div class="post-meta">
+        <time datetime="0001-01-01" class="post-time">
+          0001-01-01
+        </time>
+        
+        <span class="more-meta"> 约 4333 字 </span>
+          <span class="more-meta"> 预计阅读 9 分钟 </span>
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#版本">版本</a></li>
+<li><a href="#entry使用方法">Entry使用方法</a></li>
+<li><a href="#tkinter的15个核心组件">Tkinter的15个核心组件</a></li>
+<li><a href="#tkinter-组件的放置与排版-pack-grid-place">Tkinter 组件的放置与排版（pack，grid，place）</a></li>
+<li><a href="#使用tkinter-button时控制按钮的参数">使用tkinter.Button时控制按钮的参数</a></li>
+<li><a href="#文本框tkinter-entry-tkinter-text控制参数">文本框tkinter.Entry,tkinter.Text控制参数</a></li>
+<li><a href="#标签tkinter-label组件控制参数">标签tkinter.Label组件控制参数</a></li>
+<li><a href="#单选框和复选框radiobutton-checkbutton控制参数">单选框和复选框Radiobutton,Checkbutton控制参数</a></li>
+<li><a href="#组图组件canvas控制参数">组图组件Canvas控制参数</a></li>
+<li><a href="#菜单menu">菜单Menu</a></li>
+<li><a href="#事件关联">事件关联</a></li>
+<li><a href="#弹窗">弹窗</a></li>
+<li><a href="#字体-font">字体（font)</a></li>
+<li><a href="#tkinter-中的颜色">Tkinter 中的颜色</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      
+
+<h2 id="版本">版本</h2>
+
+<p>python版本：3.6.5</p>
+
+<p>自带 tkinter</p>
+
+<h2 id="entry使用方法">Entry使用方法</h2>
+
+<p>直接通过样例去认识就足够了</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">tkinter</span>
+<span class="n">root</span><span class="o">=</span><span class="n">tkinter</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span> <span class="c1">#生成root主窗口</span>
+<span class="n">label</span><span class="o">=</span><span class="n">tkinter</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">root</span><span class="p">,</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;Hello,GUI&#39;</span><span class="p">)</span> <span class="c1">#生成标签</span>
+<span class="n">label</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>        <span class="c1">#将标签添加到主窗口</span>
+<span class="n">button1</span><span class="o">=</span><span class="n">tkinter</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">root</span><span class="p">,</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;Button1&#39;</span><span class="p">)</span> <span class="c1">#生成button1</span>
+<span class="n">button1</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">tkinter</span><span class="o">.</span><span class="n">LEFT</span><span class="p">)</span>         <span class="c1">#将button1添加到root主窗口</span>
+<span class="n">button2</span><span class="o">=</span><span class="n">tkinter</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">root</span><span class="p">,</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;Button2&#39;</span><span class="p">)</span>
+<span class="n">button2</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">tkinter</span><span class="o">.</span><span class="n">RIGHT</span><span class="p">)</span>
+<span class="n">root</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>             <span class="c1">#进入消息循环（必需组件）</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="tkinter的15个核心组件">Tkinter的15个核心组件</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">    Button        　　按钮；
+    Canvas        　　绘图形组件，可以在其中绘制图形；
+    Checkbutton      复选框；
+    Entry        　　 文本框（单行）；
+    Text             文本框（多行）；
+    Frame         　　框架，将几个组件组成一组
+    Label        　　 标签，可以显示文字或图片；
+    Listbox      　　 列表框；
+    Menu     　　     菜单；
+    Menubutton       它的功能完全可以使用Menu替代；
+    Message          与Label组件类似，但是可以根据自身大小将文本换行；
+    Radiobutton      单选框；
+    Scale      　　   滑块；允许通过滑块来设置一数字值
+    Scrollbar        滚动条；配合使用canvas, entry, listbox, and text窗口部件的标准滚动条；
+    Toplevel         用来创建子窗口窗口组件。
+（在Tkinter中窗口部件类没有分级；所有的窗口部件类在树中都是兄弟。）</pre></td></tr></table>
+</div>
+</div>
+<h2 id="tkinter-组件的放置与排版-pack-grid-place">Tkinter 组件的放置与排版（pack，grid，place）</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">pack组件设置位置属性参数：
+    after:    　　　 将组件置于其他组件之后；
+    before:    　　　将组件置于其他组件之前；
+    anchor:    　　  组件的对齐方式，顶对齐&#39;n&#39;,底对齐&#39;s&#39;,左&#39;w&#39;,右&#39;e&#39;
+    side:    　　　　组件在主窗口的位置，可以为&#39;top&#39;,&#39;bottom&#39;,&#39;left&#39;,&#39;right&#39;（使用时tkinter.TOP,tkinter.E）；
+    fill            填充方式 (Y,垂直，X，水平）
+    expand          1可扩展，0不可扩展
+grid组件使用行列的方法放置组件的位置，参数有：
+    column:         组件所在的列起始位置；
+    columnspam:     组件的列宽；
+    row：      　　　组件所在的行起始位置；
+    rowspam：    　　组件的行宽；
+place组件可以直接使用坐标来放置组件，参数有：
+    anchor:    　　　组件对齐方式；
+    x:        　　　 组件左上角的x坐标；
+    y:        　　   组件右上角的y坐标；
+    relx:         　组件相对于窗口的x坐标，应为0-1之间的小数；
+    rely:           组件相对于窗口的y坐标，应为0-1之间的小数；
+    width:          组件的宽度；
+    heitht:    　   组件的高度；
+    relwidth:       组件相对于窗口的宽度，0-1；
+    relheight:　    组件相对于窗口的高度，0-1；</pre></td></tr></table>
+</div>
+</div>
+<h2 id="使用tkinter-button时控制按钮的参数">使用tkinter.Button时控制按钮的参数</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">    anchor:      　　　　  指定按钮上文本的位置；
+    background(bg)    　  指定按钮的背景色；
+    bitmap:       　　　　 指定按钮上显示的位图；
+    borderwidth(bd)　　　　指定按钮边框的宽度；
+    command:   　　　　　  指定按钮消息的回调函数；
+    cursor:        　　　　指定鼠标移动到按钮上的指针样式；
+    font:           　　  指定按钮上文本的字体；
+    foreground(fg)　　　　 指定按钮的前景色；
+    height:        　　　　指定按钮的高度；
+    image:        　　　　 指定按钮上显示的图片；
+    state:          　　　 指定按钮的状态（disabled）；
+    text:           　　　 指定按钮上显示的文本；
+    width:       　　　　  指定按钮的宽度
+    padx          　　　　 设置文本与按钮边框x的距离，还有pady;
+    activeforeground　　　 按下时前景色
+    textvariable    　　  可变文本，与StringVar等配合着用</pre></td></tr></table>
+</div>
+</div>
+<h2 id="文本框tkinter-entry-tkinter-text控制参数">文本框tkinter.Entry,tkinter.Text控制参数</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">    background(bg)   　　 文本框背景色；
+    foreground(fg)        前景色；
+    selectbackground　　  选定文本背景色；
+    selectforeground　　  选定文本前景色；
+    borderwidth(bd)    　 文本框边框宽度；
+    font                　字体；
+    show          　　    文本框显示的字符，若为*，表示文本框为密码框；
+    state            　　 状态；
+    width        　　　　  文本框宽度
+    textvariable    　　  可变文本，与StringVar等配合着用</pre></td></tr></table>
+</div>
+</div>
+<h2 id="标签tkinter-label组件控制参数">标签tkinter.Label组件控制参数</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">    background(bg)   　　 文本框背景色；
+    foreground(fg)        前景色；
+    selectbackground　　  选定文本背景色；
+    selectforeground　　  选定文本前景色；
+    borderwidth(bd)    　 文本框边框宽度；
+    font                　字体；
+    show          　　    文本框显示的字符，若为*，表示文本框为密码框；
+    state            　　 状态；
+    width        　　　　  文本框宽度
+    textvariable    　　  可变文本，与StringVar等配合着用</pre></td></tr></table>
+</div>
+</div>
+<h2 id="单选框和复选框radiobutton-checkbutton控制参数">单选框和复选框Radiobutton,Checkbutton控制参数</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">    anchor         　　文本位置；
+    background(bg) 　　背景色；
+    foreground(fg)    前景色；
+    borderwidth       边框宽度；
+    width        　　  组件的宽度；
+    height     　　    组件高度；
+    bitmap    　　     组件中的位图；
+    image    　　      组件中的图片；
+    font       　　    字体；
+    justify       　　 组件中多行文本的对齐方式；
+    text         　　  指定组件的文本；
+    value      　　    指定组件被选中中关联变量的值；
+    variable     　    指定组件所关联的变量；
+    indicatoron        特殊控制参数，当为0时，组件会被绘制成按钮形式;
+    textvariable       可变文本显示，与StringVar等配合着用</pre></td></tr></table>
+</div>
+</div>
+<h2 id="组图组件canvas控制参数">组图组件Canvas控制参数</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">    background(bg)  　　  背景色;
+    foreground(fg)       前景色;
+    borderwidth   　　　　组件边框宽度；
+    width     　　　　    组件宽度；
+    height     　　      高度;
+    bitmap 　　          位图;
+    image 　　　　        图片;
+    绘图的方法主要以下几种：
+    create_arc          圆弧;
+    create_bitmap  　　  绘制位图，支持XBM;
+    create_image    　　 绘制图片，支持GIF(x,y,image,anchor);
+    create_line         绘制支线；
+    create_oval;        绘制椭圆；
+    create_polygon   　　绘制多边形(坐标依次罗列，不用加括号，还有参数，fill,outline)；
+    create_rectangle　　 绘制矩形((a,b,c,d),值为左上角和右下角的坐标)；
+    create_text         绘制文字(字体参数font,)；
+    create_window    　　绘制窗口；
+    delete            　 删除绘制的图形；
+    itemconfig          修改图形属性，第一个参数为图形的ID，后边为想修改的参数；
+    move          　　   移动图像（1，4，0），1为图像对象，4为横移4像素，0为纵移像素，然后用root.update()刷新即可看到图像的移动，为了使多次移动变得可视，最好加上time.sleep()函数；
+    只要用create_方法画了一个图形，就会自动返回一个ID,创建一个图形时将它赋值给一个变量，需要ID时就可以使用这个变量名。
+    coords(ID)          返回对象的位置的两个坐标（4个数字元组）；
+
+    对于按钮组件、菜单组件等可以在创建组件时通过command参数指定其事件处理函数。方法为bind;或者用bind_class方法进行类绑定，bind_all方法将所有组件事件绑定到事件响应函数上。</pre></td></tr></table>
+</div>
+</div>
+<h2 id="菜单menu">菜单Menu</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">参数： 
+    tearoff      　   分窗，0为在原窗，1为点击分为两个窗口
+    bg,fg       　　  背景，前景
+    borderwidth    　 边框宽度
+    font              字体
+    activebackgound   点击时背景，同样有activeforeground，activeborderwidth，disabledforeground
+    cursor
+    postcommand
+    selectcolor    　 选中时背景
+    takefocus
+    title       
+    type
+    relief
+   
+方法：
+    menu.add_cascade      添加子选项
+    menu.add_command      添加命令（label参数为显示内容）
+    menu.add_separator    添加分隔线
+    menu.add_checkbutton  添加确认按钮
+    delete                删除</pre></td></tr></table>
+</div>
+</div>
+<h2 id="事件关联">事件关联</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">bind(sequence,func,add)——
+bind_class(className,sequence,func,add)
+bind_all(sequence,func,add)
+事件参数：　　
+sequence      　　　　　　　　所绑定的事件；
+func            　　　　　　 所绑定的事件处理函数；
+add             　　　　　　 可选参数，为空字符或‘+’；
+className    　　　　　　　 　所绑定的类；
+
+鼠标键盘事件
+    &lt;Button-1&gt;        　  　鼠标左键按下，2表示中键，3表示右键；
+    &lt;ButtonPress-1&gt;    　   同上；
+    &lt;ButtonRelease-1&gt;　　　 鼠标左键释放；
+    &lt;B1-Motion&gt;  　　       按住鼠标左键移动；
+    &lt;Double-Button-1&gt;  　　 双击左键；
+    &lt;Enter&gt;       　　      鼠标指针进入某一组件区域；
+    &lt;Leave&gt;    　　         鼠标指针离开某一组件区域；
+    &lt;MouseWheel&gt;  　   　　 滚动滚轮；
+    &lt;KeyPress-A&gt; 　　  　　  按下A键，A可用其他键替代；
+    &lt;Alt-KeyPress-A&gt;　　　   同时按下alt和A；alt可用ctrl和shift替代；
+    &lt;Double-KeyPress-A&gt;　　  快速按两下A；
+    &lt;Lock-KeyPress-A&gt;　　　  大写状态下按A；
+   
+窗口事件
+    Activate        　　　　 当组件由不可用转为可用时触发；
+    Configure      　　　　  当组件大小改变时触发；
+    Deactivate    　　　　　 当组件由可用转变为不可用时触发；
+    Destroy        　　　　  当组件被销毁时触发；
+    Expose         　　　　　当组件从被遮挡状态中暴露出来时触发；
+    Unmap        　　　　　　当组件由显示状态变为隐藏状态时触发；
+    Map         　　　　     当组件由隐藏状态变为显示状态时触发；
+    FocusIn       　　　 　  当组件获得焦点时触发；
+    FocusOut      　　　　　 当组件失去焦点时触发；
+    Property     　　　　    当窗体的属性被删除或改变时触发；
+    Visibility       　　　　当组件变为可视状态时触发；
+
+响应事件
+event对象（def function(event)）：
+    char        　　　　　　  按键字符，仅对键盘事件有效；
+    keycode   　　　　　　  　按键名，仅对键盘事件有效；
+    keysym     　　　　　　　 按键编码，仅对键盘事件有效；
+    num          　　　　　　鼠标按键，仅对鼠标事件有效；
+    type         　　　　    所触发的事件类型；
+    widget      　　　　     引起事件的组件；
+    width,heigh　　　　　　  组件改变后的大小，仅Configure有效；
+    x,y       　  　　　　　　鼠标当前位置，相对于窗口；
+    x_root,y_root　　　　　　 鼠标当前位置，相对于整个屏幕</pre></td></tr></table>
+</div>
+</div>
+<h2 id="弹窗">弹窗</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">messagebox._show函数的控制参数：
+    default         指定消息框按钮；
+    icon            指定消息框图标；
+    message     　 　指定消息框所显示的消息；
+    parent          指定消息框的父组件；
+    title           标题；
+    type            类型；
+
+simpledialog模块参数：
+    title           指定对话框的标题；
+    prompt        　显示的文字；
+    initialvalue    指定输入框的初始值；
+
+　　filedialog　　　　模块参数：
+    filetype   　　  指定文件类型；
+    initialdir 　　  指定默认目录；
+    initialfile 　　 指定默认文件；
+    title    　　　  指定对话框标题
+
+colorchooser模块参数：
+    initialcolor  　 指定初始化颜色；
+    title          　指定对话框标题；</pre></td></tr></table>
+</div>
+</div>
+<h2 id="字体-font">字体（font)</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">一般格式：
+（&#39;Times -10 bold&#39;)
+(&#39;Times&#39;,10,&#39;bold&#39;,&#39;italic&#39;)    依次表示字体、字号、加粗、倾斜
+
+
+补充：
+config            重新配置
+label.config(font=&#39;Arial -%d bold&#39; % scale.get())
+依次为字体，大小（大小可为字号大小），加粗
+tkinter.StringVar    能自动刷新的字符串变量，可用set和get方法进行传值和取值，类似的还有IntVar,DoubleVar...
+
+sys.stdout.flush()　　刷新输出</pre></td></tr></table>
+</div>
+</div>
+<h2 id="tkinter-中的颜色">Tkinter 中的颜色</h2>
+
+<p><center><img src="/image/tk_color.png" alt="颜色图" /></center></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">#FFB6C1 LightPink 浅粉红
+#FFC0CB Pink 粉红
+#DC143C Crimson 深红/猩红
+#FFF0F5 LavenderBlush 淡紫红
+#DB7093 PaleVioletRed 弱紫罗兰红
+#FF69B4 HotPink 热情的粉红
+#FF1493 DeepPink 深粉红
+#C71585 MediumVioletRed 中紫罗兰红
+#DA70D6 Orchid 暗紫色/兰花紫
+#D8BFD8 Thistle 蓟色
+#DDA0DD Plum 洋李色/李子紫
+#EE82EE Violet 紫罗兰
+#FF00FF Magenta 洋红/玫瑰红
+#FF00FF Fuchsia 紫红/灯笼海棠
+#8B008B DarkMagenta 深洋红
+#800080 Purple 紫色
+#BA55D3 MediumOrchid 中兰花紫
+#9400D3 DarkViolet 暗紫罗兰
+#9932CC DarkOrchid 暗兰花紫
+#4B0082 Indigo 靛青/紫兰色
+#8A2BE2 BlueViolet 蓝紫罗兰
+#9370DB MediumPurple 中紫色
+#7B68EE MediumSlateBlue 中暗蓝色/中板岩蓝
+#6A5ACD SlateBlue 石蓝色/板岩蓝
+#483D8B DarkSlateBlue 暗灰蓝色/暗板岩蓝
+#E6E6FA Lavender 淡紫色/熏衣草淡紫
+#F8F8FF GhostWhite 幽灵白
+#0000FF Blue 纯蓝
+#0000CD MediumBlue 中蓝色
+#191970 MidnightBlue 午夜蓝
+#00008B DarkBlue 暗蓝色
+#000080 Navy 海军蓝
+#4169E1 RoyalBlue 皇家蓝/宝蓝
+#6495ED CornflowerBlue 矢车菊蓝
+#B0C4DE LightSteelBlue 亮钢蓝
+#778899 LightSlateGray 亮蓝灰/亮石板灰
+#708090 SlateGray 灰石色/石板灰
+#1E90FF DodgerBlue 闪兰色/道奇蓝
+#F0F8FF AliceBlue 爱丽丝蓝
+#4682B4 SteelBlue 钢蓝/铁青
+#87CEFA LightSkyBlue 亮天蓝色
+#87CEEB SkyBlue 天蓝色
+#00BFFF DeepSkyBlue 深天蓝
+#ADD8E6 LightBlue 亮蓝
+#B0E0E6 PowderBlue 粉蓝色/火药青
+#5F9EA0 CadetBlue 军兰色/军服蓝
+#F0FFFF Azure 蔚蓝色
+#E0FFFF LightCyan 淡青色
+#AFEEEE PaleTurquoise 弱绿宝石
+#00FFFF Cyan 青色
+#00FFFF Aqua 浅绿色/水色
+#00CED1 DarkTurquoise 暗绿宝石
+#2F4F4F DarkSlateGray 暗瓦灰色/暗石板灰
+#008B8B DarkCyan 暗青色
+#008080 Teal 水鸭色
+#48D1CC MediumTurquoise 中绿宝石
+#20B2AA LightSeaGreen 浅海洋绿
+#40E0D0 Turquoise 绿宝石
+#7FFFD4 Aquamarine 宝石碧绿
+#66CDAA MediumAquamarine 中宝石碧绿
+#00FA9A MediumSpringGreen 中春绿色
+#F5FFFA MintCream 薄荷奶油
+#00FF7F SpringGreen 春绿色
+#3CB371 MediumSeaGreen 中海洋绿
+#2E8B57 SeaGreen 海洋绿
+#F0FFF0 Honeydew 蜜色/蜜瓜色
+#90EE90 LightGreen 淡绿色
+#98FB98 PaleGreen 弱绿色
+#8FBC8F DarkSeaGreen 暗海洋绿
+#32CD32 LimeGreen 闪光深绿
+#00FF00 Lime 闪光绿
+#228B22 ForestGreen 森林绿
+#008000 Green 纯绿
+#006400 DarkGreen 暗绿色
+#7FFF00 Chartreuse 黄绿色/查特酒绿
+#7CFC00 LawnGreen 草绿色/草坪绿
+#ADFF2F GreenYellow 绿黄色
+#556B2F DarkOliveGreen 暗橄榄绿
+#9ACD32 YellowGreen 黄绿色
+#6B8E23 OliveDrab 橄榄褐色
+#F5F5DC Beige 米色/灰棕色
+#FAFAD2 LightGoldenrodYellow 亮菊黄
+#FFFFF0 Ivory 象牙色
+#FFFFE0 LightYellow 浅黄色
+#FFFF00 Yellow 纯黄
+#808000 Olive 橄榄
+#BDB76B DarkKhaki 暗黄褐色/深卡叽布
+#FFFACD LemonChiffon 柠檬绸
+#EEE8AA PaleGoldenrod 灰菊黄/苍麒麟色
+#F0E68C Khaki 黄褐色/卡叽布
+#FFD700 Gold 金色
+#FFF8DC Cornsilk 玉米丝色
+#DAA520 Goldenrod 金菊黄
+#B8860B DarkGoldenrod 暗金菊黄
+#FFFAF0 FloralWhite 花的白色
+#FDF5E6 OldLace 老花色/旧蕾丝
+#F5DEB3 Wheat 浅黄色/小麦色
+#FFE4B5 Moccasin 鹿皮色/鹿皮靴
+#FFA500 Orange 橙色
+#FFEFD5 PapayaWhip 番木色/番木瓜
+#FFEBCD BlanchedAlmond 白杏色
+#FFDEAD NavajoWhite 纳瓦白/土著白
+#FAEBD7 AntiqueWhite 古董白
+#D2B48C Tan 茶色
+#DEB887 BurlyWood 硬木色
+#FFE4C4 Bisque 陶坯黄
+#FF8C00 DarkOrange 深橙色
+#FAF0E6 Linen 亚麻布
+#CD853F Peru 秘鲁色
+#FFDAB9 PeachPuff 桃肉色
+#F4A460 SandyBrown 沙棕色
+#D2691E Chocolate 巧克力色
+#8B4513 SaddleBrown 重褐色/马鞍棕色
+#FFF5EE Seashell 海贝壳
+#A0522D Sienna 黄土赭色
+#FFA07A LightSalmon 浅鲑鱼肉色
+#FF7F50 Coral 珊瑚
+#FF4500 OrangeRed 橙红色
+#E9967A DarkSalmon 深鲜肉/鲑鱼色
+#FF6347 Tomato 番茄红
+#FFE4E1 MistyRose 浅玫瑰色/薄雾玫瑰
+#FA8072 Salmon 鲜肉/鲑鱼色
+#FFFAFA Snow 雪白色
+#F08080 LightCoral 淡珊瑚色
+#BC8F8F RosyBrown 玫瑰棕色
+#CD5C5C IndianRed 印度红
+#FF0000 Red 纯红
+#A52A2A Brown 棕色
+#B22222 FireBrick 火砖色/耐火砖
+#8B0000 DarkRed 深红色
+#800000 Maroon 栗色
+#FFFFFF White 纯白
+#F5F5F5 WhiteSmoke 白烟
+#DCDCDC Gainsboro 淡灰色
+#D3D3D3 LightGrey 浅灰色
+#C0C0C0 Silver 银灰色
+#A9A9A9 DarkGray 深灰色
+#808080 Gray 灰色
+#696969 DimGray 暗淡灰
+#000000 Black 纯黑</pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Tonser</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">0001-01-01</span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/comments_of_sillicon_valley_letters/letter3/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">短评--互联网大数据分析用户情感？</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+  
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "sundxfansky/comments_blog"
+            issue-term="pathname"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+  
+
+  
+
+  
+
+  
+  
+    
+
+
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+  
+  
+    <a href="mailto:sundxfansky@sjtu.edu.cn" rel="me noopener" class="iconfont"
+      title="email" >
+      <svg class="icon" viewBox="0 0 1451 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M664.781909 681.472759 0 97.881301C0 3.997201 71.046997 0 71.046997 0L474.477909 0 961.649408 0 1361.641813 0C1361.641813 0 1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759C771.345323 681.472759 764.482731 685.154773 753.594283 688.65053L753.594283 688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858L682.561621 688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759L664.781909 681.472759ZM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633 0 212.052267 0 212.052267L0 942.809523C0 942.809523 0 1024 83.726336 1024L682.532949 1024 753.579947 1024 1348.948139 1024C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523L1432.688811 212.052267C1432.688811 212.052267 893.138176 701.759633 817.019477 767.734955 777.248 802.205449 742.347691 811.03081 718.063616 811.603883L718.063616 811.603883Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://github.com/sundxfansky" rel="me noopener" class="iconfont"
+      title="github"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+    </a>
+
+
+<a href="https://sundxfansky.club/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
+  </a>
+  
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2019
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        Tonser
+        
+      </span></span>
+
+  
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.dee43230127a73d039a734510fa896c89c3c7ce0cf0be0c7a7433f8fd69b76dc.js" integrity="sha256-3uQyMBJ6c9A5pzRRD6iWyJw8fODPC&#43;DHp0M/j9abdtw="></script>
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

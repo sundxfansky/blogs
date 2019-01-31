@@ -19,3 +19,4 @@ author: "Tonser"
 
 # 安装桌面环境
 ubuntu在原始状态的源不要更改，在更换为国内源之后都出现了can‘t locate pacakge的结果，最终换回原本的源解决，之后装ROS就很顺畅了。
+<center>![腾讯云解析](/image/sundx.jpg)</center>
