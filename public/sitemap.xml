@@ -3,6 +3,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sundxfansky.club/post/machine_vision/python_opencv_record/</loc>
+    <lastmod>2019-03-08T01:59:51+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://sundxfansky.club/post/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E7%AC%94%E8%AE%B0/1/</loc>
     <lastmod>2019-03-08T01:23:38+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -94,14 +101,14 @@
   
   <url>
     <loc>https://sundxfansky.club/tags/code/</loc>
-    <lastmod>2019-03-08T01:23:38+08:00</lastmod>
+    <lastmod>2019-03-08T01:59:51+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://sundxfansky.club/categories/code/</loc>
-    <lastmod>2019-03-08T01:23:38+08:00</lastmod>
+    <lastmod>2019-03-08T01:59:51+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -143,7 +150,7 @@
   
   <url>
     <loc>https://sundxfansky.club/post/</loc>
-    <lastmod>2019-03-08T01:23:38+08:00</lastmod>
+    <lastmod>2019-03-08T01:59:51+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -171,7 +178,7 @@
   
   <url>
     <loc>https://sundxfansky.club/tags/software-engineering/</loc>
-    <lastmod>2019-03-08T01:23:38+08:00</lastmod>
+    <lastmod>2019-03-08T01:59:51+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -192,7 +199,7 @@
   
   <url>
     <loc>https://sundxfansky.club/</loc>
-    <lastmod>2019-03-08T01:23:38+08:00</lastmod>
+    <lastmod>2019-03-08T01:59:51+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

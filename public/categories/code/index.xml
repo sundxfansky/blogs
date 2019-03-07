@@ -6,10 +6,19 @@
     <description>Recent content in Code on Tonser&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 04 Mar 2019 03:07:20 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 08 Mar 2019 01:37:53 +0800</lastBuildDate>
     
 	<atom:link href="https://sundxfansky.club/categories/code/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>学习opencv过程中python的梳理</title>
+      <link>https://sundxfansky.club/post/machine_vision/python_opencv_record/</link>
+      <pubDate>Fri, 08 Mar 2019 01:37:53 +0800</pubDate>
+      
+      <guid>https://sundxfansky.club/post/machine_vision/python_opencv_record/</guid>
+      <description>python 中各种括号的区别 大括号{}，字典，dict 中括号[]，列表，list 小括号()，元组，tuple 正则表达式 在正则表达式中使用方法如下 1 2 3</description>
+    </item>
     
     <item>
       <title>软件工程笔记（一）</title>
