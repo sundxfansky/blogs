@@ -6,10 +6,65 @@
     <description>Recent content on Tonser&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 31 Jan 2019 17:19:19 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 04 Mar 2019 03:07:20 +0800</lastBuildDate>
     
         <atom:link href="https://sundxfansky.club/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>软件工程笔记（一）</title>
+      <link>https://sundxfansky.club/post/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E7%AC%94%E8%AE%B0/1/</link>
+      <pubDate>Mon, 04 Mar 2019 03:07:20 +0800</pubDate>
+      
+      <guid>https://sundxfansky.club/post/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E7%AC%94%E8%AE%B0/1/</guid>
+      
+        <description>&lt;p&gt;整理了一下软件工程的资料，写了一丢丢笔记~
+&lt;/p&gt;
+
+&lt;h2 id=&#34;软件的本质特性&#34;&gt;软件的本质特性&lt;/h2&gt;
+
+&lt;p&gt;软件具有复杂性，一致性，可变性，与不可见性，是造成软件开发困难的重要原因。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;复杂性-&amp;gt; 内容庞大，调用复杂&lt;/p&gt;
+
+&lt;p&gt;可变-&amp;gt; 生命力&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;软件工程的产生与发展&#34;&gt;软件工程的产生与发展&lt;/h2&gt;
+
+&lt;p&gt;ARINE 5火箭在发射后37秒爆炸，损毁了数亿美金的卫星。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;原因：&lt;/strong&gt;
+程序中试图讲64位浮点数转换为16位整型数并溢出,缺少对数据溢出的错误处理，备份软件通过复制。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Visa系统从2001年开始研发，历时5年半，9k人参与开发，耗资60亿美金，代码超过5kw行，推迟三年发布，系统十分庞大，很多时间浪费在沟通与重新决定上面，公测后测试出bug超过2w个，还不包含微软内部测试出现的bug。&lt;/p&gt;
+
+&lt;p&gt;软件工程致力于解决软件开发过程中的困难。&lt;/p&gt;
+
+&lt;h2 id=&#34;什么是好的软件&#34;&gt;什么是好的软件&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;对开发人员来说：
+结构质量 代码可测试性 代码可维护性 代码可读性
+代码效率：高效管理资源 代码安全：可预防常见威胁&lt;/p&gt;
+
+&lt;p&gt;对于用户来说
+软件符合指定需求 软件几乎没有缺陷 软件性能正常 软件容易上手，操作方便&lt;/p&gt;
+
+&lt;p&gt;对于投资者（boss）来说
+软件按时交付 软件满足预算，可复用的开发过程，确保交付质量&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;编程过程与规范&#34;&gt;编程过程与规范&lt;/h2&gt;
+
+&lt;p&gt;编程是软件工程师的基本能力，编写优雅的代码是每一个程序员的不懈追求，编程是一门艺术，它能够展示结构之美、构造之美、表达之美。软件编程是一个复杂而迭代的过程，它不仅仅是编写代码，还应该包括代码审查、单元 测试、代码优化、集成调试等一系列工作。软件编码规范是与特定语言相关的描写如何编写代码的规则集合。软件全生命周期的 70% 成本是维护,软件在其生命周期中很少由原编写人员进行维护,目的是提高编码质量，避免不必要的程序错误,增强程序代码的可读性、可重用性和可移植性。&lt;a href=&#34;https://github.com/google/styleguide&#34;&gt;谷歌软件编程规范&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;未完待续&#34;&gt;未完待续&lt;/h2&gt;</description>
+      
+    </item>
     
     <item>
       <title>Tkinter 使用记录 python-GUI</title>
