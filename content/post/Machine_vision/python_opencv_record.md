@@ -7,6 +7,9 @@ tags: ["Code","Software Engineering"]
 categories: ["Code"]
 author: "Tonser"
 ---
+最近有个课程需要用到opencv与python的学习，顺便梳理了一下知识点
+<!--more-->
+
 
 ## python 中各种括号的区别
 
@@ -24,7 +27,7 @@ a = 'python sdasd 68126 asd __ sda'
 re = re.findall('[这里放需要匹配的字符]{数字，如3,6,9,}',a)
 # 上述为贪婪模式
 # 返回的a 就是匹配的内容，为list
-# 注意贪婪模式
+# 注意贪婪模式！！！！大部分该部分的bug的原因
 # python 使用的时贪婪模式，当时用贪婪模式的时候为在大括号后面加个？即可 如
 re = re.findall('[这里放需要匹配的字符]{数字，如3,6,9,}?',a)
 s

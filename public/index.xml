@@ -18,7 +18,8 @@
       
       <guid>https://sundxfansky.club/post/machine_vision/python_opencv_record/</guid>
       
-        <description>
+        <description>&lt;p&gt;最近有个课程需要用到opencv与python的学习，顺便梳理了一下知识点
+&lt;/p&gt;
 
 &lt;h2 id=&#34;python-中各种括号的区别&#34;&gt;python 中各种括号的区别&lt;/h2&gt;
 
@@ -74,7 +75,7 @@
 &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;[这里放需要匹配的字符]{数字，如3,6,9,}&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;# 上述为贪婪模式&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;# 返回的a 就是匹配的内容，为list&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# 注意贪婪模式&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# 注意贪婪模式！！！！大部分该部分的bug的原因&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;# python 使用的时贪婪模式，当时用贪婪模式的时候为在大括号后面加个？即可 如&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;[这里放需要匹配的字符]{数字，如3,6,9,}?&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;
