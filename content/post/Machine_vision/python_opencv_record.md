@@ -1,7 +1,7 @@
 ---
 title: "学习opencv过程中python的梳理"
 date: 2019-03-08T01:37:53.375+08:00
-lastmod: 2019-03-08T01:59:51.288+08:00
+lastmod: 2019-03-12T17:51:55.459+08:00
 draft: false
 tags: ["Code","Software Engineering"]
 categories: ["Code"]
@@ -58,3 +58,18 @@ s
 # \W	不匹配数字字母下划线
 
 ```
+
+## 安装anaconda python opencv中遇到的问题
+基本上按照安装 anaconda 基本过程就可以，可以添加好path，也可以后面再加，系统给其添加的path为
+
+```
+C:\Users\sundx\Anaconda3;
+C:\Users\sundx\Anaconda3\Library\mingw-w64\bin;
+C:\Users\sundx\Anaconda3\Library\usr\bin;
+C:\Users\sundx\Anaconda3\Library\bin;
+C:\Users\sundx\Anaconda3\Scripts;
+```
+这个后面会用到，在pycharm中设置时，先设置interpreter ，路径为`C:\Users\sundx\Anaconda3\python.exe`
+
+设置完成后会自动读取包含的包。之后python console打开不正常，之后可以在pycharm设置中对python console 中添加`name`为PATH的环境变量，内容为复制上述内容即可。
+

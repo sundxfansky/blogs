@@ -105,7 +105,29 @@
 &lt;span class=&#34;c1&#34;&gt;# \w	匹配任意数字字母下划线&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;# \W	不匹配数字字母下划线&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description>
+&lt;/div&gt;
+&lt;h2 id=&#34;安装anaconda-python-opencv中遇到的问题&#34;&gt;安装anaconda python opencv中遇到的问题&lt;/h2&gt;
+
+&lt;p&gt;基本上按照安装 anaconda 基本过程就可以，可以添加好path，也可以后面再加，系统给其添加的path为&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;C:\Users\sundx\Anaconda3;
+C:\Users\sundx\Anaconda3\Library\mingw-w64\bin;
+C:\Users\sundx\Anaconda3\Library\usr\bin;
+C:\Users\sundx\Anaconda3\Library\bin;
+C:\Users\sundx\Anaconda3\Scripts;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;这个后面会用到，在pycharm中设置时，先设置interpreter ，路径为&lt;code&gt;C:\Users\sundx\Anaconda3\python.exe&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;设置完成后会自动读取包含的包。之后python console打开不正常，之后可以在pycharm设置中对python console 中添加&lt;code&gt;name&lt;/code&gt;为PATH的环境变量，内容为复制上述内容即可。&lt;/p&gt;</description>
       
     </item>
     
