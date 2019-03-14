@@ -70,7 +70,7 @@
 
 <meta itemprop="datePublished" content="2019-03-08T01:37:53&#43;08:00" />
 <meta itemprop="dateModified" content="2019-03-08T01:37:53&#43;08:00" />
-<meta itemprop="wordCount" content="889">
+<meta itemprop="wordCount" content="1517">
 
 
 
@@ -300,8 +300,8 @@
             <a href="https://sundxfansky.club/categories/code/"> Code </a>
             
           </div>
-        <span class="more-meta"> 约 889 字 </span>
-          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        <span class="more-meta"> 约 1517 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
 
         
         
@@ -323,6 +323,17 @@
 <li><a href="#python-中各种括号的区别">python 中各种括号的区别</a></li>
 <li><a href="#正则表达式">正则表达式</a></li>
 <li><a href="#安装anaconda-python-opencv中遇到的问题">安装anaconda python opencv中遇到的问题</a></li>
+<li><a href="#python的枚举类">python的枚举类</a></li>
+<li><a href="#python编程中的闭包加环境变量">python编程中的闭包加环境变量</a></li>
+<li><a href="#匿名函数-lambda表达式">匿名函数(lambda表达式)</a></li>
+<li><a href="#三元表达式">三元表达式</a></li>
+<li><a href="#函数式编程">函数式编程</a>
+<ul>
+<li><a href="#map">MAP</a></li>
+<li><a href="#reduce">reduce</a></li>
+<li><a href="#filter">filter</a></li>
+</ul></li>
+<li><a href="#装饰器">装饰器</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -440,7 +451,156 @@ C:\Users\sundx\Anaconda3\Scripts;</pre></td></tr></table>
 </div>
 <p>这个后面会用到，在pycharm中设置时，先设置interpreter ，路径为<code>C:\Users\sundx\Anaconda3\python.exe</code></p>
 
-<p>设置完成后会自动读取包含的包。之后python console打开不正常，之后可以在pycharm设置中对python console 中添加<code>name</code>为PATH的环境变量，内容为复制上述内容即可。</p>
+<p>设置完成后会自动读取包含的包。之后python console打开不正常，之后可以在pycharm设置中对python console 中添加<code>name</code>为PATH的环境变量，内容为复制上述内容即可。
+至此有关python的opencv 与pycharm的配置完成</p>
+
+<h2 id="python的枚举类">python的枚举类</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
+<span class="k">class</span> <span class="nc">VIP</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">YELLOW</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">GREEN</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+
+<span class="n">VIP</span><span class="o">.</span><span class="n">YELLOW</span> <span class="c1"># 获取的就是枚举类本身</span>
+<span class="n">VIP</span><span class="o">.</span><span class="n">YELLOW</span><span class="o">.</span><span class="n">value</span> <span class="c1"># 获取值</span>
+<span class="c1"># 枚举类的特点 就是作为标签，不必了解值为多少，这就是枚举的意义。</span>
+<span class="c1"># 应当确认大写，规则，不可变，防止重复，很有效，使用字典或正常的类，是可变，而且不防止相同的类型</span>
+<span class="c1"># 枚举的类型，名字，值，同时可以遍历使用 for 循环</span>
+<span class="c1"># 可以使用别名 使用相同的值，但是使用遍历 不会显示，会认为是别名</span>
+<span class="c1"># 软件工程有23种设计模式，其中有单例模式，和枚举类的设计方法很相似</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="python编程中的闭包加环境变量">python编程中的闭包加环境变量</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">cure</span><span class="p">():</span>
+    <span class="c1"># 可以在这里面加入环境变量</span>
+    <span class="k">def</span> <span class="nf">cue_1</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;1&#34;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">cue_1</span>
+    <span class="c1"># 这就是一个闭包，闭包=环境变量+函数</span>
+    <span class="c1"># 闭包内部的函数可以使用 `nonlocal` 关键字来继承或者认为在该闭包内的变量是全局 </span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="匿名函数-lambda表达式">匿名函数(lambda表达式)</h2>
+
+<p>使用匿名函数使用lambda 定义即可。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">:</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
+<span class="k">lambda</span> <span class="n">para_lsit</span><span class="p">:</span> <span class="n">expression</span>
+<span class="n">f</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1">#结果相同</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="三元表达式">三元表达式</h2>
+
+<p>在C/C++中 <code>x&gt;y?x:y</code></p>
+
+<p>在python中 <code>x if x&gt;y else y</code></p>
+
+<h2 id="函数式编程">函数式编程</h2>
+
+<h3 id="map">MAP</h3>
+
+<p><strong>推荐多多使用</strong></p>
+
+<p>ap是一个类,执行for循环，并注意与lambda表达式结合,精简，优美，可读性高</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span>
+<span class="n">list_x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">list_y</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="n">square</span><span class="p">,</span><span class="n">list_x</span><span class="p">)</span>
+<span class="n">list_y</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">,</span><span class="n">list_x</span><span class="p">)</span>
+<span class="err">对于多个变量</span>
+<span class="n">list_z</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">y</span> <span class="p">,</span><span class="n">list_x</span><span class="p">,</span><span class="n">list_y</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="reduce">reduce</h3>
+
+<p>连续计算，连续调用lambda，递归调入参数</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="nb">reduce</span>
+<span class="n">list_x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="nb">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">:</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">,</span><span class="n">list_x</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="filter">filter</h3>
+
+<p>过滤掉不需要的内容</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">list_x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">r</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="bp">True</span> <span class="k">if</span> <span class="n">x</span><span class="o">&gt;</span><span class="mi">0</span> <span class="k">else</span> <span class="bp">False</span><span class="p">,</span><span class="n">list_x</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">r</span><span class="p">))</span>
+<span class="c1">#结果为1，1，10，1</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="装饰器">装饰器</h2>
+
+<p>在使用python中，最多使用的代码的，高级用法就是装饰器。</p>
     </div>
 
     

@@ -69,7 +69,85 @@ C:\Users\sundx\Anaconda3\Library\usr\bin;
 C:\Users\sundx\Anaconda3\Library\bin;
 C:\Users\sundx\Anaconda3\Scripts;
 ```
-这个后面会用到，在pycharm中设置时，先设置interpreter ，路径为`C:\Users\sundx\Anaconda3\python.exe`
+这个后面会用到，在pycharm中设置时，先设置interpreter ，路径为` C:\Users\sundx\Anaconda3\python.exe`
 
 设置完成后会自动读取包含的包。之后python console打开不正常，之后可以在pycharm设置中对python console 中添加`name`为PATH的环境变量，内容为复制上述内容即可。
+至此有关python的opencv 与pycharm的配置完成
 
+## python的枚举类
+```python
+from enum import Enum
+class VIP(Enum):
+    YELLOW = 1;
+    GREEN = 2;
+
+
+VIP.YELLOW # 获取的就是枚举类本身
+VIP.YELLOW.value # 获取值
+# 枚举类的特点 就是作为标签，不必了解值为多少，这就是枚举的意义。
+# 应当确认大写，规则，不可变，防止重复，很有效，使用字典或正常的类，是可变，而且不防止相同的类型
+# 枚举的类型，名字，值，同时可以遍历使用 for 循环
+# 可以使用别名 使用相同的值，但是使用遍历 不会显示，会认为是别名
+# 软件工程有23种设计模式，其中有单例模式，和枚举类的设计方法很相似
+```
+## python编程中的闭包加环境变量
+```python
+def cure():
+    # 可以在这里面加入环境变量
+    def cue_1()
+    print("1")
+    return cue_1
+    # 这就是一个闭包，闭包=环境变量+函数
+    # 闭包内部的函数可以使用 `nonlocal` 关键字来继承或者认为在该闭包内的变量是全局 
+```
+
+## 匿名函数(lambda表达式)
+使用匿名函数使用lambda 定义即可。
+
+```python
+def add(x,y):
+    return x+y
+
+f = lambda x,y: x+y
+lambda para_lsit: expression
+f(2,1)
+add(2,1)
+#结果相同
+```
+## 三元表达式
+在C/C++中 `x>y?x:y`
+
+在python中 `x if x>y else y`
+## 函数式编程
+### MAP
+**推荐多多使用**
+
+ap是一个类,执行for循环，并注意与lambda表达式结合,精简，优美，可读性高
+```python
+def square(x):
+    return x*x
+list_x = [1,2,3,4]
+list_y = map(square,list_x)
+list_y = map(lambda x: x*x,list_x)
+对于多个变量
+list_z = map(lambda x,y: x*x+y ,list_x,list_y)
+```
+
+### reduce
+连续计算，连续调用lambda，递归调入参数
+```python
+from functools import reduce
+list_x = [1,2,3,4]
+reduce(lambda x,y:x+y,list_x)
+```
+### filter
+过滤掉不需要的内容
+```python
+list_x = [1,0,1,0,10,1]
+r = filter(lambda x: True if x>0 else False,list_x)
+print(list(r))
+#结果为1，1，10，1
+```
+
+## 装饰器
+在使用python中，最多使用的代码的，高级用法就是装饰器。
